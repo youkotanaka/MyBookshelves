@@ -21,6 +21,7 @@
     </div>
     <div>
       <RouterLink class="button button--link" to="/BookList">BookList</RouterLink>
+      <RouterLink class="button button--link" to="/ListCreate">ADD</RouterLink>
     </div>
   </nav>
 </template>

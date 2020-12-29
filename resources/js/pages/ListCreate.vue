@@ -11,9 +11,15 @@
                         <label for="title" class="col-sm-3 col-form-label">vol</label>
                         <input type="text" class="col-sm-9 form-control" id="title">
                     </div>
-                    <button type="submi" class="btn btn-primary">Submit</button>
+                    <button type="submit" class="btn btn-primary">Submit</button>
                 </form>
             </div>
         </div>
     </div>
 </template>
+
+<script>
+export default {
+    
+}
+</script>

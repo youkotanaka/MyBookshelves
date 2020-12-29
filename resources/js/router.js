@@ -6,6 +6,7 @@ import Index from './pages/Index.vue'
 import BookList from './pages/BookList.vue'
 import BookShow from './pages/BookShow.vue'
 import Login from './pages/Login.vue'
+import ListCreate from './pages/ListCreate.vue'
 import SystemError from './pages/error/Systemerror.vue'
 
 import store from './store' 
@@ -42,6 +43,11 @@ const routes = [
     name: 'BookShow',
     component: BookShow,
     props: true
+  },
+  {
+    path: '/BookList/ListCreate',
+    name: 'ListCreate',
+    component: ListCreate
   },
   {
     path: '/500',
