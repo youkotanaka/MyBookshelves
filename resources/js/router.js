@@ -7,6 +7,7 @@ import BookList from './pages/BookList.vue'
 import BookShow from './pages/BookShow.vue'
 import Login from './pages/Login.vue'
 import ListCreate from './pages/ListCreate.vue'
+import ListEdit from './pages/ListEdit.vue'
 import SystemError from './pages/error/Systemerror.vue'
 
 import store from './store' 
@@ -39,15 +40,21 @@ const routes = [
     component: BookList
   },
   {
+    path: '/BookList/create',
+    name: 'ListCreate',
+    component: ListCreate
+  },
+  {
     path: '/BookList/:bookID',
     name: 'BookShow',
     component: BookShow,
     props: true
   },
   {
-    path: '/BookList/ListCreate',
-    name: 'ListCreate',
-    component: ListCreate
+    path: '/BookList/:bookID/edit',
+    name: 'ListEdit',
+    component: ListEdit,
+    props: true
   },
   {
     path: '/500',

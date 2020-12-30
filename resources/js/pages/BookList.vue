@@ -23,7 +23,9 @@
             </RouterLink>
           </td>
           <td>
-            <button class="btn btn-success">Edit</button>
+            <RouterLink v-bind:to="{name: 'ListEdit', params: {bookID: 1}}">
+              <button class="btn btn-success">Edit</button>
+            </RouterLink>
           </td>
           <td>
             <button class="btn btn-danger">Delete</button>
@@ -39,7 +41,9 @@
             </RouterLink>
           </td>
           <td>
-            <button class="btn btn-success">Edit</button>
+            <RouterLink v-bind:to="{name: 'ListEdit', params: {bookID: 2}}">
+              <button class="btn btn-success">Edit</button>
+            </RouterLink>
           </td>
           <td>
             <button class="btn btn-danger">Delete</button>
@@ -50,12 +54,14 @@
           <td>Title3</td>
           <td>Vol.3</td>
           <td>
-            <RouterLink v-bind:to="{name: 'BookShow', params: {bookID: 2}}">
+            <RouterLink v-bind:to="{name: 'BookShow', params: {bookID: 3}}">
               <button class="btn btn-primary">Show</button>
             </RouterLink>
           </td>
           <td>
-            <button class="btn btn-success">Edit</button>
+            <RouterLink v-bind:to="{name: 'ListEdit', params: {bookID: 3}}">
+              <button class="btn btn-success">Edit</button>
+            </RouterLink>
           </td>
           <td>
             <button class="btn btn-danger">Delete</button>

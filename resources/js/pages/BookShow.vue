@@ -9,11 +9,11 @@
                 </div>
                 <div class="form-group row border-bottom">
                     <label for="title" class="col-sm-3 col-form-label">Title</label>
-                    <input type="text" class="col-sm-9 form-control-plaintext" readonly id="title" value="title title">
+                    <input type="text" class="col-sm-9 form-control-plaintext" id="title" value="Title">
                 </div>
                 <div class="form-group row border-bottom">
                     <label for="title" class="col-sm-3 col-form-label">Vol.</label>
-                    <input type="text" class="col-sm-9 form-control-plaintext" readonly id="vol" value="vol1">
+                    <input type="text" class="col-sm-9 form-control-plaintext" id="vol" value="Vol.1">
                 </div>
             </form>
         </div>

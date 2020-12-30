@@ -1,5 +1,6 @@
 <template>
-    <div class="container">
+    <div>
+        <h1>List Edit</h1>
         <div class="row justify-content-center">
             <div class="col-sm-6">
                 <form>
@@ -9,7 +10,11 @@
                     </div>
                     <div class="form-group row">
                         <label for="title" class="col-sm-3 col-form-label">Title</label>
-                        <input type="text" class="col-sm-9 form-controle" id="title">
+                        <input type="text" class="col-sm-9 form-controle" id="title" value="Title">
+                    </div>
+                    <div class="form-group row">
+                        <label for="title" class="col-sm-3 col-form-label">Vol.</label>
+                        <input type="text" class="col-sm-9 form-controle" id="vol" value="Vol.">
                     </div>
                     <button type="submit" class="btn btn-primary">Submit</button>
                 </form>
