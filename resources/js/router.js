@@ -3,7 +3,7 @@ import VueRouter from 'vue-router'
 
 // ページコンポーネントをインポートする
 import Index from './pages/Index.vue'
-import BookList from './pages/BookList.vue'
+import Books from './pages/Books.vue'
 import BookShow from './pages/BookShow.vue'
 import Login from './pages/Login.vue'
 import ListCreate from './pages/ListCreate.vue'
@@ -35,23 +35,23 @@ const routes = [
     }
   },
   {
-    path: '/BookList',
-    name: 'BookList',
-    component: BookList
+    path: '/books',
+    name: 'books',
+    component: Books
   },
   {
-    path: '/BookList/create',
+    path: '/books/create',
     name: 'ListCreate',
     component: ListCreate
   },
   {
-    path: '/BookList/:bookID',
+    path: '/books/:bookID',
     name: 'BookShow',
     component: BookShow,
     props: true
   },
   {
-    path: '/BookList/:bookID/edit',
+    path: '/books/:bookID/edit',
     name: 'ListEdit',
     component: ListEdit,
     props: true
