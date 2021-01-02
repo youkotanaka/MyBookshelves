@@ -3,9 +3,8 @@
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
-use Illuminate\database\QueryException;
 
-class CreateBookListTable extends Migration
+class CreateBooksTable extends Migration
 {
     /**
      * Run the migrations.
@@ -14,10 +13,10 @@ class CreateBookListTable extends Migration
      */
     public function up()
     {
-        Schema::create('book_list', function (Blueprint $table) {
+        Schema::create('books', function (Blueprint $table) {
             $table->increments('bookID');
-            $table->string('title', 100);
-            $table->string('vol', 100);
+            $table->string('title');
+            $table->string('vol');
             $table->timestamps();
         });
     }
@@ -29,6 +28,6 @@ class CreateBookListTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('book_list');
+        Schema::dropIfExists('books');
     }
 }
