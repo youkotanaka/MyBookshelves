@@ -17,8 +17,20 @@ class BookController extends Controller
         return $book;
     }
 
-    public function store (Request $request)
+    public function store(Request $request)
     {
         return Book::creat($request->all());
+    }
+
+    public function update(Request $request, Book $book)
+    {
+        $book->update($request->all());
+        return $book;
+    }
+
+    public function destroy(Book $book)
+    {
+        $book->delete();
+        return $book;
     }
 }

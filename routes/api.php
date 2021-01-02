@@ -38,3 +38,9 @@ Route::post('/books', 'BookController@store');
 
 //Book詳細取得API
 Route::get('/books/{book}', 'BookController@show');
+
+//Book更新API
+Route::put('/books/{book}', 'BookController@update');
+
+//Book削除API
+Route::delete('/books/{book}', 'BookController@destroy');
