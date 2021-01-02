@@ -11,4 +11,9 @@ class BookController extends Controller
     {
         return Book::all();
     }
+
+    public function show(Book $book)
+    {
+        return $book;
+    }
 }

@@ -30,5 +30,8 @@ Route::post('/logout', 'Auth\LoginController@logout')->name('logout');
 // ログインユーザー
 //Route::get('/user', fn() => Auth::user())->name('user');
 
-//Indexメソッド
+//Book一覧取得API
 Route::get('/books', 'BookController@index');
+
+//Book詳細取得API
+Route::get('/books/{book}', 'BookController@show');
