@@ -33,5 +33,8 @@ Route::post('/logout', 'Auth\LoginController@logout')->name('logout');
 //Book一覧取得API
 Route::get('/books', 'BookController@index');
 
+//Book登録API
+Route::post('/books', 'BookController@store');
+
 //Book詳細取得API
 Route::get('/books/{book}', 'BookController@show');

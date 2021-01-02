@@ -16,4 +16,9 @@ class BookController extends Controller
     {
         return $book;
     }
+
+    public function store (Request $request)
+    {
+        return Book::creat($request->all());
+    }
 }
