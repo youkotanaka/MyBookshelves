@@ -4321,7 +4321,7 @@ var staticRenderFns = [
       _vm._v(" "),
       _c("input", {
         staticClass: "col-sm-9 form-controle",
-        attrs: { type: "text", id: "vol", value: "Vol.1" }
+        attrs: { type: "text", id: "vol", value: "Vol." }
       })
     ])
   }

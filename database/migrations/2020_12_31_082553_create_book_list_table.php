@@ -3,8 +3,9 @@
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
+use Illuminate\database\QueryException;
 
-class CreatePhotosTable extends Migration
+class CreateBookListTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,10 +14,10 @@ class CreatePhotosTable extends Migration
      */
     public function up()
     {
-        Schema::create('photos', function (Blueprint $table) {
-            $table->id();
-            $table->foreignId('user_id')->constrained();
-            $table->string('filename');
+        Schema::create('book_list', function (Blueprint $table) {
+            $table->increments('bookID');
+            $table->string('title', 100);
+            $table->string('vol', 100);
             $table->timestamps();
         });
     }
@@ -28,6 +29,6 @@ class CreatePhotosTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('photos');
+        Schema::dropIfExists('book_list');
     }
 }
