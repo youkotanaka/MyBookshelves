@@ -18,17 +18,17 @@
           <td>{{ book.title }}</td>
           <td>{{ book.vol }}</td>
           <td>
-            <RouterLink v-bind:to="{name: 'book.show', params: {id: book.id }}">
+            <RouterLink v-bind:to="{name: 'BookShow', params: {id: book.id }}">
               <button class="btn btn-primary">Show</button>
             </RouterLink>
           </td>
           <td>
-            <RouterLink v-bind:to="{name: 'book.edit', params: {id: bookid}}">
+            <RouterLink v-bind:to="{name: 'ListEdit', params: {id: bookid}}">
               <button class="btn btn-succes">Edit</button>
             </RouterLink>
           </td>
           <td>
-            <button class="btn btn-danger">Delete</button>
+            <button class="btn btn-danger" v-on:click="deleteBook(book.id)">Delete</button>
           </td>
         </tr>
       </tbody>
@@ -49,6 +49,11 @@ export default {
         this.books = res.data;
       });
     }
+  },
+  deleteBook(id) {
+    axios.delete('/api/books/' + id).then((res) => {
+      this.getBooks();
+    });
   },
   mounted() {
     this.getBooks();

@@ -2124,7 +2124,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 /* harmony default export */ __webpack_exports__["default"] = ({
   props: {
-    bookID: String
+    id: String
   }
 });
 
@@ -2269,7 +2269,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 /* harmony default export */ __webpack_exports__["default"] = ({
   props: {
-    bookID: String
+    id: String
   }
 });
 
@@ -3977,7 +3977,7 @@ var render = function() {
                   "RouterLink",
                   {
                     attrs: {
-                      to: { name: "book.edit", params: { id: _vm.bookid } }
+                      to: { name: "book.edit", params: { id: _vm.id } }
                     }
                   },
                   [
