@@ -74,6 +74,20 @@
 
 <script>
 export default {
-  
+  data: function() {
+    return {
+      books: []
+    }
+  },
+  methods: {
+    getBooks() {
+      axios.get('/api/books').then((res) => {
+        this.books = res.data;
+      });
+    }
+  },
+  mounted() {
+    this.getBooks();
+  }
 }
 </script>
