@@ -2177,43 +2177,25 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-/* harmony default export */ __webpack_exports__["default"] = ({});
+/* harmony default export */ __webpack_exports__["default"] = ({
+  data: function data() {
+    return {
+      books: []
+    };
+  },
+  methods: {
+    getBooks: function getBooks() {
+      var _this = this;
+
+      axios.get('/api/books').then(function (res) {
+        _this.books = res.data;
+      });
+    }
+  },
+  mounted: function mounted() {
+    this.getBooks();
+  }
+});
 
 /***/ }),
 
@@ -3884,7 +3866,7 @@ var render = function() {
           _c("input", {
             staticClass: "col-sm-9 form-control-plaintext",
             attrs: { type: "text", readonly: "", id: "id" },
-            domProps: { value: _vm.bookID }
+            domProps: { value: _vm.ID }
           })
         ]),
         _vm._v(" "),
@@ -3958,133 +3940,61 @@ var render = function() {
     _c("table", { staticClass: "table table-hover" }, [
       _vm._m(0),
       _vm._v(" "),
-      _c("tbody", [
-        _c("tr", [
-          _c("th", { attrs: { scope: "row" } }, [_vm._v("1")]),
-          _vm._v(" "),
-          _c("td", [_vm._v("Title1")]),
-          _vm._v(" "),
-          _c("td", [_vm._v("Vol.1")]),
-          _vm._v(" "),
-          _c(
-            "td",
-            [
-              _c(
-                "RouterLink",
-                { attrs: { to: { name: "BookShow", params: { bookID: 1 } } } },
-                [
-                  _c("button", { staticClass: "btn btn-primary" }, [
-                    _vm._v("Show")
-                  ])
-                ]
-              )
-            ],
-            1
-          ),
-          _vm._v(" "),
-          _c(
-            "td",
-            [
-              _c(
-                "RouterLink",
-                { attrs: { to: { name: "ListEdit", params: { bookID: 1 } } } },
-                [
-                  _c("button", { staticClass: "btn btn-success" }, [
-                    _vm._v("Edit")
-                  ])
-                ]
-              )
-            ],
-            1
-          ),
-          _vm._v(" "),
-          _vm._m(1)
-        ]),
-        _vm._v(" "),
-        _c("tr", [
-          _c("th", { attrs: { scope: "row" } }, [_vm._v("2")]),
-          _vm._v(" "),
-          _c("td", [_vm._v("Title2")]),
-          _vm._v(" "),
-          _c("td", [_vm._v("Vol.2")]),
-          _vm._v(" "),
-          _c(
-            "td",
-            [
-              _c(
-                "RouterLink",
-                { attrs: { to: { name: "BookShow", params: { bookID: 2 } } } },
-                [
-                  _c("button", { staticClass: "btn btn-primary" }, [
-                    _vm._v("Show")
-                  ])
-                ]
-              )
-            ],
-            1
-          ),
-          _vm._v(" "),
-          _c(
-            "td",
-            [
-              _c(
-                "RouterLink",
-                { attrs: { to: { name: "ListEdit", params: { bookID: 2 } } } },
-                [
-                  _c("button", { staticClass: "btn btn-success" }, [
-                    _vm._v("Edit")
-                  ])
-                ]
-              )
-            ],
-            1
-          ),
-          _vm._v(" "),
-          _vm._m(2)
-        ]),
-        _vm._v(" "),
-        _c("tr", [
-          _c("th", { attrs: { scope: "row" } }, [_vm._v("3")]),
-          _vm._v(" "),
-          _c("td", [_vm._v("Title3")]),
-          _vm._v(" "),
-          _c("td", [_vm._v("Vol.3")]),
-          _vm._v(" "),
-          _c(
-            "td",
-            [
-              _c(
-                "RouterLink",
-                { attrs: { to: { name: "BookShow", params: { bookID: 3 } } } },
-                [
-                  _c("button", { staticClass: "btn btn-primary" }, [
-                    _vm._v("Show")
-                  ])
-                ]
-              )
-            ],
-            1
-          ),
-          _vm._v(" "),
-          _c(
-            "td",
-            [
-              _c(
-                "RouterLink",
-                { attrs: { to: { name: "ListEdit", params: { bookID: 3 } } } },
-                [
-                  _c("button", { staticClass: "btn btn-success" }, [
-                    _vm._v("Edit")
-                  ])
-                ]
-              )
-            ],
-            1
-          ),
-          _vm._v(" "),
-          _vm._m(3)
-        ])
-      ])
+      _c(
+        "tbody",
+        _vm._l(_vm.books, function(book) {
+          return _c("tr", [
+            _c("th", { attrs: { scope: "row" } }, [_vm._v(_vm._s(book.id))]),
+            _vm._v(" "),
+            _c("td", [_vm._v(_vm._s(book.title))]),
+            _vm._v(" "),
+            _c("td", [_vm._v(_vm._s(book.vol))]),
+            _vm._v(" "),
+            _c(
+              "td",
+              [
+                _c(
+                  "RouterLink",
+                  {
+                    attrs: {
+                      to: { name: "book.show", params: { id: book.id } }
+                    }
+                  },
+                  [
+                    _c("button", { staticClass: "btn btn-primary" }, [
+                      _vm._v("Show")
+                    ])
+                  ]
+                )
+              ],
+              1
+            ),
+            _vm._v(" "),
+            _c(
+              "td",
+              [
+                _c(
+                  "RouterLink",
+                  {
+                    attrs: {
+                      to: { name: "book.edit", params: { id: _vm.bookid } }
+                    }
+                  },
+                  [
+                    _c("button", { staticClass: "btn btn-succes" }, [
+                      _vm._v("Edit")
+                    ])
+                  ]
+                )
+              ],
+              1
+            ),
+            _vm._v(" "),
+            _vm._m(1, true)
+          ])
+        }),
+        0
+      )
     ])
   ])
 }
@@ -4107,22 +4017,6 @@ var staticRenderFns = [
         _vm._v(" "),
         _c("th", { attrs: { scope: "col" } }, [_vm._v("Delete")])
       ])
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("td", [
-      _c("button", { staticClass: "btn btn-danger" }, [_vm._v("Delete")])
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("td", [
-      _c("button", { staticClass: "btn btn-danger" }, [_vm._v("Delete")])
     ])
   },
   function() {
@@ -4272,7 +4166,7 @@ var render = function() {
             _c("input", {
               staticClass: "col-sm-9 form-control-plaintext",
               attrs: { type: "text", readonly: "", id: "id" },
-              domProps: { value: _vm.bookID }
+              domProps: { value: _vm.ID }
             })
           ]),
           _vm._v(" "),
@@ -21997,12 +21891,12 @@ var routes = [{
   name: 'ListCreate',
   component: _pages_ListCreate_vue__WEBPACK_IMPORTED_MODULE_6__["default"]
 }, {
-  path: '/books/:bookID',
+  path: '/books/:id',
   name: 'BookShow',
   component: _pages_BookShow_vue__WEBPACK_IMPORTED_MODULE_4__["default"],
   props: true
 }, {
-  path: '/books/:bookID/edit',
+  path: '/books/:id/edit',
   name: 'ListEdit',
   component: _pages_ListEdit_vue__WEBPACK_IMPORTED_MODULE_7__["default"],
   props: true

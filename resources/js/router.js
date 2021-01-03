@@ -45,13 +45,13 @@ const routes = [
     component: ListCreate
   },
   {
-    path: '/books/:bookID',
+    path: '/books/:id',
     name: 'BookShow',
     component: BookShow,
     props: true
   },
   {
-    path: '/books/:bookID/edit',
+    path: '/books/:id/edit',
     name: 'ListEdit',
     component: ListEdit,
     props: true

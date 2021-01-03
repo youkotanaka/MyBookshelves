@@ -6,7 +6,7 @@
                 <form>
                     <div class="form-group row">
                         <label for="id" class="col-sm-3 col-form-label">ID</label>
-                        <input type="text" class="col-sm-9 form-control-plaintext" readonly id="id" v-bind:value="bookID">
+                        <input type="text" class="col-sm-9 form-control-plaintext" readonly id="id" v-bind:value="ID">
                     </div>
                     <div class="form-group row">
                         <label for="title" class="col-sm-3 col-form-label">Title</label>

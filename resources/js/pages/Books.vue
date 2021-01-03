@@ -13,54 +13,18 @@
         </tr>
       </thead>
       <tbody>
-        <tr>
-          <th scope="row">1</th>
-          <td>Title1</td>
-          <td>Vol.1</td>
+        <tr v-for="book in books">
+          <th scope="row">{{ book.id}}</th>
+          <td>{{ book.title }}</td>
+          <td>{{ book.vol }}</td>
           <td>
-            <RouterLink v-bind:to="{name: 'BookShow', params: {bookID: 1}}">
+            <RouterLink v-bind:to="{name: 'book.show', params: {id: book.id }}">
               <button class="btn btn-primary">Show</button>
             </RouterLink>
           </td>
           <td>
-            <RouterLink v-bind:to="{name: 'ListEdit', params: {bookID: 1}}">
-              <button class="btn btn-success">Edit</button>
-            </RouterLink>
-          </td>
-          <td>
-            <button class="btn btn-danger">Delete</button>
-          </td>
-        </tr>
-        <tr>
-          <th scope="row">2</th>
-          <td>Title2</td>
-          <td>Vol.2</td>
-          <td>
-            <RouterLink v-bind:to="{name: 'BookShow', params: {bookID: 2}}">
-              <button class="btn btn-primary">Show</button>
-            </RouterLink>
-          </td>
-          <td>
-            <RouterLink v-bind:to="{name: 'ListEdit', params: {bookID: 2}}">
-              <button class="btn btn-success">Edit</button>
-            </RouterLink>
-          </td>
-          <td>
-            <button class="btn btn-danger">Delete</button>
-          </td>
-        </tr>
-        <tr>
-          <th scope="row">3</th>
-          <td>Title3</td>
-          <td>Vol.3</td>
-          <td>
-            <RouterLink v-bind:to="{name: 'BookShow', params: {bookID: 3}}">
-              <button class="btn btn-primary">Show</button>
-            </RouterLink>
-          </td>
-          <td>
-            <RouterLink v-bind:to="{name: 'ListEdit', params: {bookID: 3}}">
-              <button class="btn btn-success">Edit</button>
+            <RouterLink v-bind:to="{name: 'book.edit', params: {id: bookid}}">
+              <button class="btn btn-succes">Edit</button>
             </RouterLink>
           </td>
           <td>
