@@ -1,5 +1,6 @@
 <?php
 
+use App\Book;
 use Illuminate\Database\Seeder;
 
 class BooksTableSeeder extends Seeder
@@ -11,22 +12,11 @@ class BooksTableSeeder extends Seeder
      */
     public function run()
     {
-        $param = [
-            'title' => 'ハイキュー！！',
-            'vol' => '16',
-        ];
-        DB::table('books')->insert($param);
-
-        $param = [
-            'title' => 'ハイキュー！！',
-            'vol' => '2',
-        ];
-        DB::table('books')->insert($param);
-        
-        $param = [
-            'title' => 'NewType',
-            'vol' => '202006',
-        ];
-        DB::table('books')->insert($param);
+        for ($i = 1; $i <= 10; $i++){
+            Book::create([
+                'title' => 'title'.$i,
+                'vol'=> 'vol'.$i,
+            ]);
+        }
     }
 }
