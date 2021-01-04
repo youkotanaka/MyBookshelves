@@ -9,7 +9,7 @@
                         <input type="text" class="col-sm-9 form-control" id="title" v-model="book.title">
                     </div>
                     <div class="form-group row">
-                        <label for="vol" class="col-sm-3 col-form-label">Vol.</label>
+                        <label for="vol" class="col-sm-3 col-form-label">Vol</label>
                         <input type="text" class="col-sm-9 form-control" id="vol" v-model="book.vol">
                     </div>
                     <button type="submit" class="btn btn-primary">Submit</button>

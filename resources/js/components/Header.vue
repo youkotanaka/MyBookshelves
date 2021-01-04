@@ -20,8 +20,8 @@
       </div>
     </div>
     <div>
-      <RouterLink class="button button--link" to="/BookList">BookList</RouterLink>
-      <RouterLink class="button button--link" to="/BookList/create">ADD</RouterLink>
+      <RouterLink class="button button--link" to="/books">BookList</RouterLink>
+      <RouterLink class="button button--link" to="/books/create">ADD</RouterLink>
     </div>
   </nav>
 </template>

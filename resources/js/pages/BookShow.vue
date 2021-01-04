@@ -12,7 +12,7 @@
                     <input type="text" class="col-sm-9 form-control-plaintext" id="title" v-model="book.title">
                 </div>
                 <div class="form-group row border-bottom">
-                    <label for="title" class="col-sm-3 col-form-label">Vol.</label>
+                    <label for="vol" class="col-sm-3 col-form-label">Vol.</label>
                     <input type="text" class="col-sm-9 form-control-plaintext" id="vol" v-model="book.vol">
                 </div>
             </form>
@@ -23,7 +23,7 @@
 <script>
 export default {
     props: {
-        id: String
+        bookID: String
     },
     data: function() {
         return {
