@@ -14,7 +14,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-/*Route::middleware('auth:api')->get('/user', function (Request $request) {
+Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
 
@@ -28,7 +28,7 @@ Route::post('/login', 'Auth\LoginController@login')->name('login');
 Route::post('/logout', 'Auth\LoginController@logout')->name('logout');
 
 // ログインユーザー
-//Route::get('/user', fn() => Auth::user())->name('user');*/
+//Route::get('/user', fn() => Auth::user())->name('user');
 
 //Book一覧取得API
 Route::get('/books', 'BookController@index');

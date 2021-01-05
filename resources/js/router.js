@@ -69,14 +69,6 @@ const router = new VueRouter({
   routes
 })
 
-//システムエラーのルート定義
-const routes = [
-  {
-    path: '/500',
-    component: SystemError
-  }
-]
-
 // VueRouterインスタンスをエクスポートする
 // app.jsでインポートするため
 export default router

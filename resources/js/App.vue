@@ -28,7 +28,7 @@ export default {
       return this.$store.state.error.code
     }
   },
-  /*watch: {
+  watch: {
     errorCode: {
       handler (val) {
         if (val === INTERNAL_SERVER_ERROR) {
@@ -40,6 +40,6 @@ export default {
     $route () {
       this.$store.commit('error/setCode', null)
     }
-  }*/
+  }
 }
 </script>
