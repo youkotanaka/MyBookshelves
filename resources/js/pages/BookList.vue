@@ -45,16 +45,17 @@ export default {
   },
   methods: {
     getBooks() {
-      axios.get('/api/books').then((res) => {
+      axios.get('/api/books')
+      .then((res) => {
         this.books = res.data;
       });
+    },
+    deleteBook(id) {
+      axios.delete('/api/books/' + id)
+      .then((res) => {
+        this.getBooks();
+      });
     }
-  },
-  deleteBook(id) {
-    axios.delete('/api/books/' + id)
-    .then((res) => {
-      this.getBooks();
-    });
   },
   mounted() {
     this.getBooks();

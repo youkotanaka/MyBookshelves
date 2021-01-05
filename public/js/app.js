@@ -2151,14 +2151,14 @@ __webpack_require__.r(__webpack_exports__);
       axios.get('/api/books').then(function (res) {
         _this.books = res.data;
       });
-    }
-  },
-  deleteBook: function deleteBook(id) {
-    var _this2 = this;
+    },
+    deleteBook: function deleteBook(id) {
+      var _this2 = this;
 
-    axios["delete"]('/api/books/' + id).then(function (res) {
-      _this2.getBooks();
-    });
+      axios["delete"]('/api/books/' + id).then(function (res) {
+        _this2.getBooks();
+      });
+    }
   },
   mounted: function mounted() {
     this.getBooks();
@@ -2321,14 +2321,14 @@ __webpack_require__.r(__webpack_exports__);
     getBook: function getBook() {
       var _this = this;
 
-      axios.get('/api/books/' + this.id).then(function (res) {
+      axios.get('/api/books/' + this.bookID).then(function (res) {
         _this.book = res.data;
       });
     },
     submit: function submit() {
       var _this2 = this;
 
-      axios.put('/api/books/' + this.id, this.book).then(function (res) {
+      axios.put('/api/books/' + this.bookID, this.book).then(function (res) {
         _this2.$router.push({
           name: 'BookList'
         });

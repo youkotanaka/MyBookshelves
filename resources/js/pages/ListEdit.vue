@@ -35,13 +35,13 @@ export default {
     },
     methods: {
         getBook() {
-            axios.get('/api/books/' + this.id)
+            axios.get('/api/books/' + this.bookID)
             .then((res) => {
                 this.book = res.data;
             });
         },
         submit() {
-            axios.put('/api/books/' + this.id, this.book)
+            axios.put('/api/books/' + this.bookID, this.book)
             .then((res) => {
                 this.$router.push({name: 'BookList'})
             });
