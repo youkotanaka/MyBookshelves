@@ -32,7 +32,8 @@ export default {
     },
     methods: {
         getBook(){
-            axios.get('/api/books/' + this.id).then((res) => {
+            axios.get('/api/books/' + this.bookID)
+            .then((res) => {
                 this.book = res.data;
             });
         }

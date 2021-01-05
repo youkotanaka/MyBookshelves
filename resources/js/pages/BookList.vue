@@ -14,7 +14,7 @@
       </thead>
       <tbody>
         <tr v-for="book in books">
-          <th scope="row">{{ book.id}}</th>
+          <th scope="row">{{ book.id }}</th>
           <td>{{ book.title }}</td>
           <td>{{ book.vol }}</td>
           <td>
@@ -51,7 +51,8 @@ export default {
     }
   },
   deleteBook(id) {
-    axios.delete('/api/books/' + id).then((res) => {
+    axios.delete('/api/books/' + id)
+    .then((res) => {
       this.getBooks();
     });
   },

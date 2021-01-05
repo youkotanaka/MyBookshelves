@@ -2211,7 +2211,7 @@ __webpack_require__.r(__webpack_exports__);
     getBook: function getBook() {
       var _this = this;
 
-      axios.get('/api/books/' + this.id).then(function (res) {
+      axios.get('/api/books/' + this.bookID).then(function (res) {
         _this.book = res.data;
       });
     }
@@ -2265,7 +2265,7 @@ __webpack_require__.r(__webpack_exports__);
 
       axios.post('/api/books', this.book).then(function (res) {
         _this.$router.push({
-          name: 'books'
+          name: 'BookList'
         });
       });
     }

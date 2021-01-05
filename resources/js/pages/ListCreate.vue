@@ -28,8 +28,9 @@ export default {
     },
     methods: {
         submit() {
-            axios.post('/api/books', this.book).then((res) => {
-                this.$router.push({name: 'books'});
+            axios.post('/api/books', this.book)
+            .then((res) => {
+                this.$router.push({name: 'BookList'});
             });
         }
     }
