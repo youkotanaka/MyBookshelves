@@ -1949,20 +1949,21 @@ __webpack_require__.r(__webpack_exports__);
     errorCode: function errorCode() {
       return this.$store.state.error.code;
     }
-  },
-  watch: {
+  }
+  /*watch: {
     errorCode: {
-      handler: function handler(val) {
+      handler (val) {
         if (val === INTERNAL_SERVER_ERROR) {
-          this.$router.push('/500');
+          this.$router.push('/500')
         }
       },
       immediate: true
     },
-    $route: function $route() {
-      this.$store.commit('error/setCode', null);
+    $route () {
+      this.$store.commit('error/setCode', null)
     }
-  }
+  }*/
+
 });
 
 /***/ }),
