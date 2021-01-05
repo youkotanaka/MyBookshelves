@@ -3926,8 +3926,8 @@ var render = function() {
       _vm._v(" "),
       _c(
         "tbody",
-        _vm._l(_vm.books, function(book) {
-          return _c("tr", [
+        _vm._l(_vm.books, function(book, index) {
+          return _c("tr", { key: index }, [
             _c("th", { attrs: { scope: "row" } }, [_vm._v(_vm._s(book.id))]),
             _vm._v(" "),
             _c("td", [_vm._v(_vm._s(book.title))]),

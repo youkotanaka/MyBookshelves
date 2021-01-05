@@ -13,7 +13,7 @@
         </tr>
       </thead>
       <tbody>
-        <tr v-for="book in books">
+        <tr v-for="(book, index) in books" :key="index">
           <th scope="row">{{ book.id }}</th>
           <td>{{ book.title }}</td>
           <td>{{ book.vol }}</td>
