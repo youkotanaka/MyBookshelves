@@ -3,9 +3,9 @@ import VueRouter from 'vue-router'
 
 // ページコンポーネントをインポートする
 import Index from './pages/Index.vue'
+import Login from './pages/Login.vue'
 import BookList from './pages/BookList.vue'
 import BookShow from './pages/BookShow.vue'
-import Login from './pages/Login.vue'
 import ListCreate from './pages/ListCreate.vue'
 import ListEdit from './pages/ListEdit.vue'
 import SystemError from './pages/error/Systemerror.vue'

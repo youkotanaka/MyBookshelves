@@ -3,7 +3,7 @@
         <h1>Book Show</h1>
         <div class="col-sm-6">
             <form>
-                <div class="form -group row border-bottom">
+                <div class="form-group row border-bottom">
                     <label for="id" class="col-sm-3 col-form-label">ID</label>
                     <input type="text" class="col-sm-9 form-control-plaintext" readonly id="id" v-model="book.id">
                 </div>

@@ -4043,7 +4043,7 @@ var render = function() {
     _vm._v(" "),
     _c("div", { staticClass: "col-sm-6" }, [
       _c("form", [
-        _c("div", { staticClass: "form -group row border-bottom" }, [
+        _c("div", { staticClass: "form-group row border-bottom" }, [
           _c(
             "label",
             { staticClass: "col-sm-3 col-form-label", attrs: { for: "id" } },
@@ -22049,9 +22049,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(vue__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var vue_router__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! vue-router */ "./node_modules/vue-router/dist/vue-router.esm.js");
 /* harmony import */ var _pages_Index_vue__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./pages/Index.vue */ "./resources/js/pages/Index.vue");
-/* harmony import */ var _pages_BookList_vue__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./pages/BookList.vue */ "./resources/js/pages/BookList.vue");
-/* harmony import */ var _pages_BookShow_vue__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./pages/BookShow.vue */ "./resources/js/pages/BookShow.vue");
-/* harmony import */ var _pages_Login_vue__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./pages/Login.vue */ "./resources/js/pages/Login.vue");
+/* harmony import */ var _pages_Login_vue__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./pages/Login.vue */ "./resources/js/pages/Login.vue");
+/* harmony import */ var _pages_BookList_vue__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./pages/BookList.vue */ "./resources/js/pages/BookList.vue");
+/* harmony import */ var _pages_BookShow_vue__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./pages/BookShow.vue */ "./resources/js/pages/BookShow.vue");
 /* harmony import */ var _pages_ListCreate_vue__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./pages/ListCreate.vue */ "./resources/js/pages/ListCreate.vue");
 /* harmony import */ var _pages_ListEdit_vue__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./pages/ListEdit.vue */ "./resources/js/pages/ListEdit.vue");
 /* harmony import */ var _pages_error_Systemerror_vue__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./pages/error/Systemerror.vue */ "./resources/js/pages/error/Systemerror.vue");
@@ -22077,7 +22077,7 @@ var routes = [{
 }, {
   path: '/login',
   name: 'Login',
-  component: _pages_Login_vue__WEBPACK_IMPORTED_MODULE_5__["default"],
+  component: _pages_Login_vue__WEBPACK_IMPORTED_MODULE_3__["default"],
   beforeEnter: function beforeEnter(to, from, next) {
     // ★　追加
     if (_store__WEBPACK_IMPORTED_MODULE_9__["default"].getters['auth/check']) {
@@ -22089,7 +22089,7 @@ var routes = [{
 }, {
   path: '/books',
   name: 'BookList',
-  component: _pages_BookList_vue__WEBPACK_IMPORTED_MODULE_3__["default"]
+  component: _pages_BookList_vue__WEBPACK_IMPORTED_MODULE_4__["default"]
 }, {
   path: '/books/create',
   name: 'ListCreate',
@@ -22097,7 +22097,7 @@ var routes = [{
 }, {
   path: '/books/:bookID',
   name: 'BookShow',
-  component: _pages_BookShow_vue__WEBPACK_IMPORTED_MODULE_4__["default"],
+  component: _pages_BookShow_vue__WEBPACK_IMPORTED_MODULE_5__["default"],
   props: true
 }, {
   path: '/books/:bookID/edit',
