@@ -3941,7 +3941,7 @@ var render = function() {
                   "RouterLink",
                   {
                     attrs: {
-                      to: { name: "BookShow", params: { bookID: book.id } }
+                      to: { name: "BookShow", params: { bookID: book.bookID } }
                     }
                   },
                   [
@@ -3961,7 +3961,7 @@ var render = function() {
                   "RouterLink",
                   {
                     attrs: {
-                      to: { name: "ListEdit", params: { bookID: book.id } }
+                      to: { name: "ListEdit", params: { bookID: book.bookID } }
                     }
                   },
                   [

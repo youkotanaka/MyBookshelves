@@ -18,12 +18,12 @@
           <td>{{ book.title }}</td>
           <td>{{ book.vol }}</td>
           <td>
-            <RouterLink v-bind:to="{name: 'BookShow', params: {bookID: book.id}}">
+            <RouterLink v-bind:to="{name: 'BookShow', params: {bookID: book.bookID}}">
               <button class="btn btn-primary">Show</button>
             </RouterLink>
           </td>
           <td>
-            <RouterLink v-bind:to="{name: 'ListEdit', params: {bookID: book.id}}">
+            <RouterLink v-bind:to="{name: 'ListEdit', params: {bookID: book.bookID}}">
               <button class="btn btn-succes">Edit</button>
             </RouterLink>
           </td>
