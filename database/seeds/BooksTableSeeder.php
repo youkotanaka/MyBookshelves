@@ -15,7 +15,7 @@ class BooksTableSeeder extends Seeder
         for ($i = 1; $i <= 10; $i++){
             Book::create([
                 'title' => 'title'.$i,
-                'vol'=> 'vol'.$i,
+                'vol' => 'vol'.$i
             ]);
         }
     }
