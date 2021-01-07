@@ -12,7 +12,7 @@ class BookController extends Controller
         return Book::all();
     }
 
-    public function sotre(Request $request)
+    public function store(Request $request)
     {
         return Book::create($request->all());
     }
