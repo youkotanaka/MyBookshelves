@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="container">
     <h1>Book List</h1>
     <table class="table table-hover">
       <thead class="thead-light">
