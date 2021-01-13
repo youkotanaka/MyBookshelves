@@ -2125,6 +2125,11 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   computed: {
     isLogin: function isLogin() {
@@ -3875,63 +3880,69 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c(
-    "nav",
-    { staticClass: "navbar" },
-    [
-      _c("RouterLink", { staticClass: "navbar__brand", attrs: { to: "/" } }, [
-        _vm._v("\n    MyBookshelves\n  ")
-      ]),
-      _vm._v(" "),
-      _c("div", { staticClass: "navbar__menu" }, [
-        _vm.isLogin
-          ? _c("div", { staticClass: "navbar__item" }, [_vm._m(0)])
-          : _vm._e(),
-        _vm._v(" "),
-        _vm.isLogin
-          ? _c("span", { staticClass: "navbar__item" }, [
-              _vm._v("\n      username\n    ")
-            ])
-          : _c(
-              "div",
-              { staticClass: "navbar__item" },
-              [
-                _c(
-                  "RouterLink",
-                  {
-                    staticClass: "button button--link",
-                    attrs: { to: "/login" }
-                  },
-                  [_vm._v("\n        Login / Register\n      ")]
-                )
-              ],
-              1
-            )
-      ]),
-      _vm._v(" "),
+  return _c("div", { staticClass: "container-fluid bg-dark mb-3" }, [
+    _c("div", { staticClass: "container" }, [
       _c(
-        "div",
+        "nav",
+        { staticClass: "navbar navbar-dark" },
         [
           _c(
             "RouterLink",
-            { staticClass: "button button--link", attrs: { to: "/books" } },
-            [_vm._v("BookList")]
+            { staticClass: "navbar__brand", attrs: { to: "/" } },
+            [_vm._v("\n        MyBookshelves\n      ")]
           ),
           _vm._v(" "),
+          _c("div", { staticClass: "navbar__menu" }, [
+            _vm.isLogin
+              ? _c("div", { staticClass: "navbar__item" }, [_vm._m(0)])
+              : _vm._e(),
+            _vm._v(" "),
+            _vm.isLogin
+              ? _c("span", { staticClass: "navbar__item" }, [
+                  _vm._v("\n      username\n    ")
+                ])
+              : _c(
+                  "div",
+                  { staticClass: "navbar__item" },
+                  [
+                    _c(
+                      "RouterLink",
+                      {
+                        staticClass: "button button--link",
+                        attrs: { to: "/login" }
+                      },
+                      [_vm._v("\n        Login / Register\n      ")]
+                    )
+                  ],
+                  1
+                )
+          ]),
+          _vm._v(" "),
           _c(
-            "RouterLink",
-            {
-              staticClass: "button button--link",
-              attrs: { to: "/books/create" }
-            },
-            [_vm._v("ADD")]
+            "div",
+            [
+              _c(
+                "RouterLink",
+                { staticClass: "button button--link", attrs: { to: "/books" } },
+                [_vm._v("BookList")]
+              ),
+              _vm._v(" "),
+              _c(
+                "RouterLink",
+                {
+                  staticClass: "button button--link",
+                  attrs: { to: "/books/create" }
+                },
+                [_vm._v("ADD")]
+              )
+            ],
+            1
           )
         ],
         1
       )
-    ],
-    1
-  )
+    ])
+  ])
 }
 var staticRenderFns = [
   function() {

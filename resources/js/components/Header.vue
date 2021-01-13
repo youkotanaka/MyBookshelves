@@ -1,8 +1,10 @@
 <template>
-  <nav class="navbar">
-    <RouterLink class="navbar__brand" to="/">
-      MyBookshelves
-    </RouterLink>
+  <div class="container-fluid bg-dark mb-3">
+    <div class="container">
+      <nav class="navbar navbar-dark">
+        <RouterLink class="navbar__brand" to="/">
+          MyBookshelves
+        </RouterLink>
     <div class="navbar__menu">
       <div v-if="isLogin" class="navbar__item">
         <button class="button">
@@ -23,7 +25,10 @@
       <RouterLink class="button button--link" to="/books">BookList</RouterLink>
       <RouterLink class="button button--link" to="/books/create">ADD</RouterLink>
     </div>
-  </nav>
+      </nav>
+    </div>
+    
+  </div>
 </template>
 
 <script>
