@@ -1,8 +1,7 @@
 <template>
   <div class="container">
     <h1>Book List</h1>
-    <!-- ★検索機能 -->
-    <input type="text" v-model="searchWord" placeholder="キーワード検索">
+    <input-component></input-component> <!-- ★検索機能 -->
     <table class="table table-hover">
       <thead class="thead-light">
         <tr>
@@ -26,7 +25,7 @@
           </td>
           <td>
             <RouterLink v-bind:to="{name: 'ListEdit', params: {bookID: book.id}}">
-              <button class="btn btn-succes">Edit</button>
+              <button class="btn btn-success">Edit</button>
             </RouterLink>
           </td>
           <td>
@@ -39,8 +38,9 @@
 </template>
 
 <script>
+import InputComponent from '../components/InputComponent.vue';
 export default {
-  data: function() {
+  data: function() {InputComponent
     return {
       books: []
     }
