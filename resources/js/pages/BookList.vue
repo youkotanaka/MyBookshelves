@@ -1,6 +1,8 @@
 <template>
   <div class="container">
     <h1>Book List</h1>
+    <!-- ★ -->
+    <input type="text" v-model="searchWord" placeholder="キーワード検索">
     <table class="table table-hover">
       <thead class="thead-light">
         <tr>
