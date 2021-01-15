@@ -12,6 +12,11 @@ class BookController extends Controller
         return Book::all();
     }
 
+    // public function find()
+    // {
+    //     return Book::where(フィールド名,　値)->get()
+    // }
+
     public function store(Request $request)
     {
         return Book::create($request->all());

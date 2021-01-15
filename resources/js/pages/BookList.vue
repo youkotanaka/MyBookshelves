@@ -40,7 +40,10 @@
 <script>
 import InputComponent from '../components/InputComponent.vue';
 export default {
-  data: function() {InputComponent
+  components: {
+    InputComponent
+  },
+  data: function() {
     return {
       books: []
     }
