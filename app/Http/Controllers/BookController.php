@@ -17,6 +17,13 @@ class BookController extends Controller
     //     return Book::where(フィールド名,　値)->get()
     // }
 
+    public function search(Request $request)
+    {
+        $title =  Book::where('title', $request->input)->get();
+        $param = ['input' => $request->input, 'title'=>$title];
+        return view ('InputComponent', $param);
+    }
+
     public function store(Request $request)
     {
         return Book::create($request->all());

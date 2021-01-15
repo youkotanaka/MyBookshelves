@@ -22,10 +22,10 @@ export default {
         searchText: '',
         books: []
     }),
-    async created() {
-        const res = await axios.get(this.book)
-        this.book = res.data.results
-    },
+    // async created() {
+    //     const res = await axios.get(this.book)
+    //     this.book = res.data.results
+    // },
     computed: {
         splittedSearchText() {
             return this.searchText.splite(/[\s]+/)
