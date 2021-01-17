@@ -1,7 +1,7 @@
 <template>
   <div class="container">
     <h1>Book List</h1>
-    <input-component></input-component> <!-- ★検索機能 -->
+    <input-component :SearchWords='Keywords'></input-component> <!-- ★検索機能 -->
     <table class="table table-hover">
       <thead class="thead-light">
         <tr>
@@ -20,16 +20,17 @@
           <td>{{ book.vol }}</td>
           <td>
             <RouterLink v-bind:to="{name: 'BookShow', params: {bookID: book.id}}">
-              <button class="btn btn-primary">Show</button>
+              <ButtonComponent class= "btn btn-primary" btnName = "Show"/>
             </RouterLink>
           </td>
           <td>
             <RouterLink v-bind:to="{name: 'ListEdit', params: {bookID: book.id}}">
-              <button class="btn btn-success">Edit</button>
+              <ButtonComponent class= "btn btn-success" btnName = "Edit"/>
             </RouterLink>
           </td>
           <td>
-            <button class="btn btn-danger" v-on:click="deleteBook(book.id)">Delete</button>
+            <ButtonComponent class= "btn btn-danger" btnName = "Delete" v-on:click="deleteBook(book.id)"/>
+            <!-- <button class="btn btn-danger" v-on:click="deleteBook(book.id)">Delete</button> -->
           </td>
         </tr>
       </tbody>
@@ -39,9 +40,11 @@
 
 <script>
 import InputComponent from '../components/InputComponent.vue';
+import ButtonComponent from '../components/ButtonComponent.vue'
 export default {
   components: {
-    InputComponent
+    InputComponent,
+    ButtonComponent
   },
   data: function() {
     return {
