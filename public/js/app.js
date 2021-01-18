@@ -2246,28 +2246,26 @@ __webpack_require__.r(__webpack_exports__);
   },
   computed: {
     search_books: function search_books() {
-      var _this = this;
-
       var searchText2 = this.searchText.trim();
       if (searchText2 === '') return this.books;
       return this.books.filter(function (book) {
-        return book.title.includes(_this.searchText) || book.vol.includes(_this.searchText);
+        return book.title.includes(searchText2) || book.vol.includes(searchText2);
       });
     }
   },
   methods: {
     getBooks: function getBooks() {
-      var _this2 = this;
+      var _this = this;
 
       axios.get('/api/books').then(function (res) {
-        _this2.books = res.data;
+        _this.books = res.data;
       });
     },
     deleteBook: function deleteBook(id) {
-      var _this3 = this;
+      var _this2 = this;
 
       axios["delete"]('/api/books/' + id).then(function (res) {
-        _this3.getBooks();
+        _this2.getBooks();
       });
     }
   },

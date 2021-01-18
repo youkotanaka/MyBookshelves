@@ -66,12 +66,14 @@ export default {
   },
   computed: {
     search_books() {
+
       let searchText2 = this.searchText.trim()
+
       if (searchText2 === '') return this.books;
 
       return this.books.filter(book => {
-          return book.title.includes(this.searchText) ||
-          book.vol.includes(this.searchText)
+        return book.title.includes(searchText2) ||
+        book.vol.includes(searchText2)
       })
     }
   },

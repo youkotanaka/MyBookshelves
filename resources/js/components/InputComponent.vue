@@ -27,11 +27,17 @@ export default {
     //     this.book = res.data.results
     // },
     computed: {
-        search_books() {
-            return this.books.filter(book => {
-                return book.title.includes(this.searchText)
-            })
-        },
+    search_books() {
+        //★猫本P.162を見よ（$emit）
+      let searchText2 = this.searchText.trim()
+
+      if (searchText2 === '') return this.books;
+
+      return this.books.filter(book => {
+        return book.title.includes(searchText2) ||
+        book.vol.includes(searchText2)
+      })
+    },
         // splittedSearchText() {
         //     // return this.searchText.splite(/[\s]+/)
         // },
