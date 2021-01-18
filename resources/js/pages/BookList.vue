@@ -1,7 +1,7 @@
 <template>
   <div class="container">
     <h1>Book List</h1>
-    <input-component :SearchWords='Keywords' /> <!-- ★検索機能 -->
+    <InputComponent :SearchWords='Keywords' /> <!-- ★検索機能 -->
     <table class="table table-hover">
       <thead class="thead-light">
         <tr>
@@ -40,7 +40,7 @@
 
 <script>
 import InputComponent from '../components/InputComponent.vue';
-import ButtonComponent from '../components/ButtonComponent.vue'
+import ButtonComponent from '../components/ButtonComponent.vue';
 export default {
   components: {
     InputComponent,

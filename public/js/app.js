@@ -2208,11 +2208,18 @@ __webpack_require__.r(__webpack_exports__);
   //     this.book = res.data.results
   // },
   computed: {
-    splittedSearchText: function splittedSearchText() {
-      return this.searchText.splite(/[\s]+/);
-    },
-    booksList: function booksList() {
+    search_books: function search_books() {
       var _this = this;
+
+      return this.books.filter(function (books) {
+        return books.title.includes(_this.searchText);
+      });
+    },
+    // splittedSearchText() {
+    //     // return this.searchText.splite(/[\s]+/)
+    // },
+    booksList: function booksList() {
+      var _this2 = this;
 
       if (!this.books) {
         return [];
@@ -2223,7 +2230,7 @@ __webpack_require__.r(__webpack_exports__);
       }
 
       return this.books.filter(function (book) {
-        return _this.filteredBooks(book);
+        return _this2.filteredBooks(book);
       });
     }
   },
@@ -4147,7 +4154,7 @@ var render = function() {
         }
       }),
       _vm._v(" "),
-      _vm._l(_vm.books, function(book, index) {
+      _vm._l(_vm.search_books, function(book, index) {
         return _c("div", { key: index }, [
           _c("p", [_vm._v(_vm._s(book.title))])
         ])
@@ -4184,7 +4191,7 @@ var render = function() {
     [
       _c("h1", [_vm._v("Book List")]),
       _vm._v(" "),
-      _c("input-component", { attrs: { SearchWords: _vm.Keywords } }),
+      _c("InputComponent", { attrs: { SearchWords: _vm.Keywords } }),
       _vm._v(" "),
       _c("table", { staticClass: "table table-hover" }, [
         _vm._m(0),

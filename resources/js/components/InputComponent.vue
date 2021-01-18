@@ -7,7 +7,7 @@
             @compositionStart = "isComposing = true"
             @compositionend = "isComposing = false">
         <div
-            v-for = "(book, index) in books"
+            v-for = "(book, index) in search_books"
             v-bind:key = "index"
         >
             <p>{{ book.title }}</p>
@@ -27,9 +27,14 @@ export default {
     //     this.book = res.data.results
     // },
     computed: {
-        splittedSearchText() {
-            return this.searchText.splite(/[\s]+/)
+        search_books(){
+            return this.books.filter(books => {
+                return books.title.includes(this.searchText)
+            })
         },
+        // splittedSearchText() {
+        //     // return this.searchText.splite(/[\s]+/)
+        // },
         booksList() {
             if (!this.books) {
                 return []
