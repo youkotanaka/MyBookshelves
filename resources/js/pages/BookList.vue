@@ -1,7 +1,7 @@
 <template>
   <div class="container">
     <h1>Book List</h1>
-    <input-component :SearchWords='Keywords'></input-component> <!-- ★検索機能 -->
+    <input-component :SearchWords='Keywords' /> <!-- ★検索機能 -->
     <table class="table table-hover">
       <thead class="thead-light">
         <tr>
