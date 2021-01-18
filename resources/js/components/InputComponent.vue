@@ -27,25 +27,25 @@ export default {
     //     this.book = res.data.results
     // },
     computed: {
-        search_books(){
-            return this.books.filter(books => {
-                return books.title.includes(this.searchText)
+        search_books() {
+            return this.books.filter(book => {
+                return book.title.includes(this.searchText)
             })
         },
         // splittedSearchText() {
         //     // return this.searchText.splite(/[\s]+/)
         // },
-        booksList() {
-            if (!this.books) {
-                return []
-            }
-            if (!this.searchText.length) {
-                return this.books
-            }
-            return this.books.filter(book => {
-                return  this.filteredBooks(book)
-            })
-        }
+        // booksList() {
+        //     if (!this.books) {
+        //         return []
+        //     }
+        //     if (!this.searchText.length) {
+        //         return this.books
+        //     }
+        //     return this.books.filter(book => {
+        //         return  this.filteredBooks(book)
+        //     })
+        // }
     },
     methods: {
         filteredBooks(book) {

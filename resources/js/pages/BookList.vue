@@ -1,7 +1,18 @@
 <template>
   <div class="container">
     <h1>Book List</h1>
-    <InputComponent :SearchWords='Keywords' /> <!-- ★検索機能 -->
+    <input
+            v-model = "searchText"
+            type = "text"
+            placeholder = "Enter text"
+            @compositionStart = "isComposing = true"
+            @compositionend = "isComposing = false">
+        <div
+            v-for = "(book, index) in search_books"
+            v-bind:key = "index"
+        >
+        </div>
+    <!-- <InputComponent :SearchWords='Keywords' /> ★検索機能 -->
     <table class="table table-hover">
       <thead class="thead-light">
         <tr>
@@ -14,7 +25,7 @@
         </tr>
       </thead>
       <tbody>
-        <tr v-for="(book, index) in books" :key="index">
+        <tr v-for="(book, index) in search_books" :key="index">
           <th scope="row">{{ book.id }}</th>
           <td>{{ book.title }}</td>
           <td>{{ book.vol }}</td>
@@ -39,16 +50,29 @@
 </template>
 
 <script>
-import InputComponent from '../components/InputComponent.vue';
+// import InputComponent from '../components/InputComponent.vue';
 import ButtonComponent from '../components/ButtonComponent.vue';
 export default {
   components: {
-    InputComponent,
+    // InputComponent,
     ButtonComponent
   },
   data: function() {
     return {
+      book: null,
+      searchText: '',
       books: []
+    }
+  },
+  computed: {
+    search_books() {
+      let searchText2 = this.searchText.trim()
+      if (searchText2 === '') return this.books;
+
+      return this.books.filter(book => {
+          return book.title.includes(this.searchText) ||
+          book.vol.includes(this.searchText)
+      })
     }
   },
   methods: {
