@@ -2,7 +2,7 @@
 <div id="overlay" v-on:click="clickEvent">
     <div id="attention" v-on:click="stopEvent">
         <p>本当に削除してよろしいですか？</p>
-        <ButtonComponent class="btn btn-danger" btnName="OK" v-on:click="deleteBook(book.id)"/>
+        <ButtonComponent class="btn btn-danger" btnName="OK" v-on:click="deleteBook()"/>
         <ButtonComponent class="btn btn-primary" btnName="Chancel" v-on:click="clickEvent" />
     </div>
 </div>
@@ -21,6 +21,9 @@ export default {
         }
     },
     methods: {
+        deleteBook: function() {
+            this.$emit('deleteBook()')
+        },
         clickEvent: function() {
             this.$emit('click')
         },
