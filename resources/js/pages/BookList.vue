@@ -41,7 +41,6 @@
           </td>
           <td>
             <ButtonComponent class= "btn btn-danger" btnName = "Delete" v-on:click="deleteBook(book.id)"/>
-            <!-- <button class="btn btn-danger" v-on:click="deleteBook(book.id)">Delete</button> -->
           </td>
         </tr>
       </tbody>
