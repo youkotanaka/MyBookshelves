@@ -1,5 +1,5 @@
 <template>
-    <button v-on:click="deleteBook(book.id)">{{ btnName }}
+    <button v-on:click="deleteBook">{{ btnName }}
     </button>
 </template>
 <script>
@@ -9,6 +9,11 @@ export default {
         'btnName': {
             type: String,
             default: 'Button'
+        }
+    },
+    methods: {
+        deleteBook: function() {
+            this.$emit('click')
         }
     }
 }

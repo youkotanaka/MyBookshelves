@@ -2034,6 +2034,11 @@ __webpack_require__.r(__webpack_exports__);
       type: String,
       "default": 'Button'
     }
+  },
+  methods: {
+    deleteBook: function deleteBook() {
+      this.$emit('click');
+    }
   }
 });
 
@@ -3895,17 +3900,9 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c(
-    "button",
-    {
-      on: {
-        click: function($event) {
-          return _vm.deleteBook(_vm.book.id)
-        }
-      }
-    },
-    [_vm._v(_vm._s(_vm.btnName) + "\n")]
-  )
+  return _c("button", { on: { click: _vm.deleteBook } }, [
+    _vm._v(_vm._s(_vm.btnName) + "\n")
+  ])
 }
 var staticRenderFns = []
 render._withStripped = true
