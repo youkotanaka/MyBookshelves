@@ -98,6 +98,7 @@ export default {
       .then((res) => {
         this.getBooks();
       });
+      this.closeModal()
     },
     openModal: function() {
       this.showContent = true
