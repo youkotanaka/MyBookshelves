@@ -5,14 +5,14 @@
             v-model = "searchText"
             type = "text"
             placeholder = "Enter text"
-            @compositionStart = "isComposing = true"
-            @compositionend = "isComposing = false">
+            v-on:compositionStart = "isComposing = true"
+            v-on:compositionend = "isComposing = false">
         <div
             v-for = "(book, index) in search_books"
             v-bind:key = "index"
         >
         </div>
-    <!-- <InputComponent :SearchWords='Keywords' /> ★検索機能 -->
+    <!-- <InputComponent v-bind:SearchWords='Keywords' /> ★検索機能 -->
     <table class="table table-hover">
       <thead class="thead-light">
         <tr>
@@ -25,7 +25,7 @@
         </tr>
       </thead>
       <tbody>
-        <tr v-for="(book, index) in search_books" :key="index">
+        <tr v-for="(book, index) in search_books" v-bind:key="index">
           <th scope="row">{{ book.id }}</th>
           <td>{{ book.title }}</td>
           <td>{{ book.vol }}</td>

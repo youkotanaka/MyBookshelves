@@ -1,7 +1,7 @@
 <template>
   <div>
     <header>
-      <Header />
+      <HeaderComponent />
     </header>
     <main>
       <div class="container">
@@ -9,19 +9,19 @@
       </div>
     </main>
     <footer>
-      <Footer />
+      <FooterComponent />
     </footer>
   </div>
 </template>
 
 <script>
-import Header from './components/Header.vue'
-import Footer from './components/Footer.vue'
+import HeaderComponent from './components/HeaderComponent.vue'
+import FooterComponent from './components/FooterComponent.vue'
 
 export default {
   components: {
-    Header,
-    Footer
+    HeaderComponent,
+    FooterComponent
   },
    computed: {
     errorCode () {

@@ -4,8 +4,8 @@
             v-model = "searchText"
             type = "text"
             placeholder = "Enter text"
-            @compositionStart = "isComposing = true"
-            @compositionend = "isComposing = false">
+            v-on:compositionStart = "isComposing = true"
+            v-on:compositionend = "isComposing = false">
         <div
             v-for = "(book, index) in search_books"
             v-bind:key = "index"

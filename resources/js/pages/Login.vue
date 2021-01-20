@@ -3,23 +3,23 @@
     <ul class="tab">
       <li
         class="tab__item"
-        :class="{'tab__item--active': tab === 1 }"
-        @click="tab = 1"
+        v-bind:class="{'tab__item--active': tab === 1 }"
+        v-on:click="tab = 1"
       >Login</li>
       <li
         class="tab__item"
-        :class="{'tab__item--active': tab === 2 }"
-        @click="tab = 2"
+        v-bind:class="{'tab__item--active': tab === 2 }"
+        v-on:click="tab = 2"
       >Register</li>
     </ul>
     <div class="panel" v-show="tab === 1">
-      <form class="form" @submit.prevent="login">
+      <form class="form" v-on:submit.prevent="login">
         <div v-if="loginErrors" class="errors">
           <ul v-if="loginErrors.email">
-            <li v-for="msg in loginErrors.email" :key="msg">{{ msg }}</li>
+            <li v-for="msg in loginErrors.email" v-bind:key="msg">{{ msg }}</li>
           </ul>
           <ul v-if="loginErrors.password">
-            <li v-for="msg in loginErrors.password" :key="msg">{{ msg }}</li>
+            <li v-for="msg in loginErrors.password" v-bind:key="msg">{{ msg }}</li>
           </ul>
         </div>
         <label for="login-email">Email</label>
@@ -32,16 +32,16 @@
       </form>
     </div>
     <div class="panel" v-show="tab === 2">
-      <form class="form" @submit.prevent="register">
+      <form class="form" v-on:submit.prevent="register">
         <div v-if="registerErrors" class="errors">
           <ul v-if="registerErrors.name">
-            <li v-for="msg in registerErrors.name" :key="msg">{{ msg }}</li>
+            <li v-for="msg in registerErrors.name" v-bind:key="msg">{{ msg }}</li>
           </ul>
           <ul v-if="registerErrors.email">
-            <li v-for="msg in registerErrors.email" :key="msg">{{ msg }}</li>
+            <li v-for="msg in registerErrors.email" v-bind:key="msg">{{ msg }}</li>
           </ul>
           <ul v-if="registerErrors.password">
-            <li v-for="msg in registerErrors.password" :key="msg">{{ msg }}</li>
+            <li v-for="msg in registerErrors.password" v-bind:key="msg">{{ msg }}</li>
           </ul>
         </div>
         <label for="username">Name</label>
