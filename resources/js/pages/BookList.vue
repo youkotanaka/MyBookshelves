@@ -57,7 +57,7 @@
 
 <script>
 // import InputComponent from '../components/InputComponent.vue';
-// inport ModalComponent from '../components/ModalComponent.vue';
+// import ModalComponent from '../components/ModalComponent.vue';
 import ButtonComponent from '../components/ButtonComponent.vue';
 export default {
   components: {
