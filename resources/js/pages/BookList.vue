@@ -41,13 +41,11 @@
           </td>
           <td>
             <ButtonComponent class= "btn btn-danger" btnName = "Delete" v-on:click="openModal"/>
-            <div id="overlay" v-show="showContent" v-on:click="closeModal">
-              <div id="attention" v-on:click="stopEvent">
-                <p>本当に削除してよろしいですか？</p>
-                  <ButtonComponent class="btn btn-danger" btnName="OK" v-on:click="deleteBook(book.id)"/>
-                  <ButtonComponent class="btn btn-primary" btnName="Chancel" v-on:click="closeModal"/>
-              </div>
-            </div>
+            <ModalComponent v-on:close="closeModal" v-if="showContent">
+              <p>本当に削除してよろしいですか？</p>
+              <ButtonComponent class="btn btn-danger" v-on:click="deleteBook(book.id)" btnName="OK" />
+              <ButtonComponent class="btn btn-primary" v-on:click="closeModal" btnName="Cancel" />
+            </ModalComponent>
           </td>
         </tr>
       </tbody>
@@ -57,12 +55,12 @@
 
 <script>
 // import InputComponent from '../components/InputComponent.vue';
-// import ModalComponent from '../components/ModalComponent.vue';
+import ModalComponent from '../components/ModalComponent.vue';
 import ButtonComponent from '../components/ButtonComponent.vue';
 export default {
   components: {
     // InputComponent,
-    // ModalComponent,
+    ModalComponent,
     ButtonComponent
   },
   data: function() {
@@ -115,29 +113,3 @@ export default {
   }
 }
 </script>
-
-<style>
-  #overlay{
-    /* 要素を重ねたときの順番 */
-    z-index:1;
-
-    /* 画面全体を覆う設定 */
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0,0,0,0.1);
-
-    /* 画面中央に要素を表示させる設定 */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  #attention{
-    z-index: 2;
-    width: 50%;
-    padding: 1em;
-    background: #fff;
-  }
-</style>

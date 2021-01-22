@@ -1,9 +1,10 @@
 <template>
-<div id="overlay" v-on:click="clickEvent">
-    <div id="attention" v-on:click="stopEvent">
-        <p>本当に削除してよろしいですか？</p>
-        <ButtonComponent class="btn btn-danger" btnName="OK" v-on:click="deleteBook()"/>
-        <ButtonComponent class="btn btn-primary" btnName="Chancel" v-on:click="clickEvent" />
+<div id="overlay" v-on:click="$emit('close')">
+    <div id="attention" v-on:click.stop="doThis">
+        <h2>Attention!!</h2>
+        <slot>
+        <ButtonComponent class="btn btn-primary" v-on:click="$emit('close')" btnName="Cancel" />
+        </slot>
     </div>
 </div>
 </template>
@@ -14,23 +15,6 @@ export default {
     components: {
         ButtonComponent
     },
-    name: 'OpenModal',
-    data: function() {
-        return {
-            showContent: false
-        }
-    },
-    methods: {
-        deleteBook: function() {
-            this.$emit('deleteBook()')
-        },
-        clickEvent: function() {
-            this.$emit('click')
-        },
-        stopEvent: function() {
-            event.stopPropagation()
-        },
-    }
 }
 </script>
 
