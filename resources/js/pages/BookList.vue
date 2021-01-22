@@ -1,18 +1,17 @@
 <template>
   <div class="container">
     <h1>Book List</h1>
-    <input
-            v-model = "searchText"
-            type = "text"
-            placeholder = "Enter text"
+    検索：
+    <InputComponent
+            v-bind:value = "searchText"
+            v-on:input = "searchText = $event"
             v-on:compositionStart = "isComposing = true"
-            v-on:compositionend = "isComposing = false">
+            v-on:compositionend = "isComposing = false" />
         <div
             v-for = "(book, index) in search_books"
             v-bind:key = "index"
         >
         </div>
-    <!-- <InputComponent v-bind:SearchWords='Keywords' /> ★検索機能 -->
     <table class="table table-hover">
       <thead class="thead-light">
         <tr>
@@ -54,12 +53,12 @@
 </template>
 
 <script>
-// import InputComponent from '../components/InputComponent.vue';
+import InputComponent from '../components/InputComponent.vue';
 import ModalComponent from '../components/ModalComponent.vue';
 import ButtonComponent from '../components/ButtonComponent.vue';
 export default {
   components: {
-    // InputComponent,
+    InputComponent,
     ModalComponent,
     ButtonComponent
   },
