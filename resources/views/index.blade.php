@@ -19,7 +19,9 @@
 </head>
 
 <body>
-  <div id="app"></div>
+  <div id="app">
+    <div class="bg"></div>
+  </div>
 
   <!-- Scripts -->
   <script src="{{ mix('/js/app.js') }}" defer></script>
