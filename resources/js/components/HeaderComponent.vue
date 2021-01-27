@@ -22,8 +22,12 @@
       </div>
     </div> -->
     <div>
-      <RouterLink class="button button--link" to="/books">BookList</RouterLink>
-      <RouterLink class="button button--link" to="/books/create">ADD</RouterLink>
+      <RouterLink to="/books">
+        <ButtonComponent class="btn btn-menu" btnName="BookList" />
+      </RouterLink>
+      <RouterLink to="/books/create">
+        <ButtonComponent class="btn btn-menu" btnName="ADD" />
+      </RouterLink>
     </div>
       </nav>
     </div>
@@ -32,7 +36,11 @@
 </template>
 
 <script>
+import ButtonComponent from '../components/ButtonComponent.vue'
 export default {
+  components: {
+    ButtonComponent
+  },
   computed: {
     isLogin () {
       return this.$store.getters['auth/check']

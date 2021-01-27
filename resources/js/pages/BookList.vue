@@ -1,12 +1,13 @@
 <template>
   <div class="container">
     <h1>Book List</h1>
-    検索：
+    <p>Search：
     <InputComponent
             v-bind:value = "searchText"
             v-on:input = "searchText = $event"
             v-on:compositionStart = "isComposing = true"
             v-on:compositionend = "isComposing = false" />
+    </p>
         <div
             v-for = "(book, index) in search_books"
             v-bind:key = "index"

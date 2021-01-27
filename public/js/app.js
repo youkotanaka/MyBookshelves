@@ -2127,6 +2127,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _components_ButtonComponent_vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../components/ButtonComponent.vue */ "./resources/js/components/ButtonComponent.vue");
 //
 //
 //
@@ -2160,7 +2161,15 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+
 /* harmony default export */ __webpack_exports__["default"] = ({
+  components: {
+    ButtonComponent: _components_ButtonComponent_vue__WEBPACK_IMPORTED_MODULE_0__["default"]
+  },
   computed: {
     isLogin: function isLogin() {
       return this.$store.getters['auth/check'];
@@ -2241,6 +2250,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_InputComponent_vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../components/InputComponent.vue */ "./resources/js/components/InputComponent.vue");
 /* harmony import */ var _components_ModalComponent_vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../components/ModalComponent.vue */ "./resources/js/components/ModalComponent.vue");
 /* harmony import */ var _components_ButtonComponent_vue__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../components/ButtonComponent.vue */ "./resources/js/components/ButtonComponent.vue");
+//
 //
 //
 //
@@ -4703,17 +4713,26 @@ var render = function() {
             [
               _c(
                 "RouterLink",
-                { staticClass: "button button--link", attrs: { to: "/books" } },
-                [_vm._v("BookList")]
+                { attrs: { to: "/books" } },
+                [
+                  _c("ButtonComponent", {
+                    staticClass: "btn btn-menu",
+                    attrs: { btnName: "BookList" }
+                  })
+                ],
+                1
               ),
               _vm._v(" "),
               _c(
                 "RouterLink",
-                {
-                  staticClass: "button button--link",
-                  attrs: { to: "/books/create" }
-                },
-                [_vm._v("ADD")]
+                { attrs: { to: "/books/create" } },
+                [
+                  _c("ButtonComponent", {
+                    staticClass: "btn btn-menu",
+                    attrs: { btnName: "ADD" }
+                  })
+                ],
+                1
               )
             ],
             1
@@ -4850,21 +4869,28 @@ var render = function() {
     { staticClass: "container" },
     [
       _c("h1", [_vm._v("Book List")]),
-      _vm._v("\n  検索：\n  "),
-      _c("InputComponent", {
-        attrs: { value: _vm.searchText },
-        on: {
-          input: function($event) {
-            _vm.searchText = $event
-          },
-          compositionStart: function($event) {
-            _vm.isComposing = true
-          },
-          compositionend: function($event) {
-            _vm.isComposing = false
-          }
-        }
-      }),
+      _vm._v(" "),
+      _c(
+        "p",
+        [
+          _vm._v("Search：\n  "),
+          _c("InputComponent", {
+            attrs: { value: _vm.searchText },
+            on: {
+              input: function($event) {
+                _vm.searchText = $event
+              },
+              compositionStart: function($event) {
+                _vm.isComposing = true
+              },
+              compositionend: function($event) {
+                _vm.isComposing = false
+              }
+            }
+          })
+        ],
+        1
+      ),
       _vm._v(" "),
       _vm._l(_vm.search_books, function(book, index) {
         return _c("div", { key: index })
