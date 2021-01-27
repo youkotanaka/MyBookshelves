@@ -19,8 +19,7 @@
 </head>
 
 <body>
-  <div id="app">
-    <div class="bg"></div>
+  <div id="app" class="wrapper">
   </div>
 
   <!-- Scripts -->

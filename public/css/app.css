@@ -10909,6 +10909,12 @@ body {
   background-blend-mode: lighten;
 }
 
+.wrapper {
+  display: frex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
 h1 {
   font-family: "Caveat", cursive;
   color: #355a07;
@@ -10940,7 +10946,7 @@ h1 {
   border-color: #7a5b43;
 }
 
-.table {
+table {
   background-color: rgba(241, 231, 224, 0.5);
 }
 
@@ -10948,13 +10954,25 @@ thead {
   color: #fff;
 }
 
+tbody tr,
 tbody td,
-div label {
+div label,
+div input {
   font-weight: bold;
+  color: #355a07;
 }
 
 .bg-box {
   background-color: rgba(241, 231, 224, 0.5);
   padding: 40px 50px 50px 30px;
+}
+
+.footer {
+  color: #4b321e;
+  background-color: #B99B84;
+  width: 100%;
+  padding: 0.5rem 1rem;
+  text-align: center;
+  margin-top: auto;
 }
 

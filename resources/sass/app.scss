@@ -14,6 +14,12 @@ body {
     background-blend-mode: lighten;
 }
 
+.wrapper {
+    display: frex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
 h1 {
     font-family: 'Caveat', cursive;
     color: #355a07;
@@ -52,7 +58,7 @@ h1 {
 }
 
 
-.table {
+table {
     background-color:rgba(#f1e7e0, 0.5);
 }
 
@@ -60,9 +66,12 @@ thead {
     color: #fff;
 }
 
+tbody tr,
 tbody td,
-div label {
+div label,
+div input {
     font-weight: bold;
+    color: #355a07;
 }
 
 .bg-box {
@@ -70,10 +79,11 @@ div label {
     padding: 40px 50px 50px 30px;
 }
 
-//  {
-//     background-color: ;rgba(#f0f0d4, 0.5);
-// }
-
-// .navbar #title {
-//     font-family: 'Caveat', cursive;
-// }
+.footer {
+    color: #4b321e;
+    background-color: #B99B84;
+    width: 100%;
+    padding: 0.5rem 1.0rem;
+    text-align: center;
+    margin-top: auto;
+}

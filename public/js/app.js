@@ -2079,6 +2079,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 //
 //
 //
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   computed: _objectSpread(_objectSpread({}, Object(vuex__WEBPACK_IMPORTED_MODULE_1__["mapState"])({
@@ -4606,7 +4607,7 @@ var render = function() {
     _c("header", [_c("HeaderComponent")], 1),
     _vm._v(" "),
     _c("main", [
-      _c("div", { staticClass: "container" }, [_c("RouterView")], 1)
+      _c("div", { staticClass: "container wrapper" }, [_c("RouterView")], 1)
     ]),
     _vm._v(" "),
     _c("footer", [_c("FooterComponent")], 1)
@@ -4660,24 +4661,9 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c(
-    "footer",
-    { staticClass: "footer" },
-    [
-      _vm.isLogin
-        ? _c(
-            "button",
-            { staticClass: "button button--link", on: { click: _vm.logout } },
-            [_vm._v("\n    Logout\n  ")]
-          )
-        : _c(
-            "RouterLink",
-            { staticClass: "button button--link", attrs: { to: "/login" } },
-            [_vm._v("\n    Login / Register\n  ")]
-          )
-    ],
-    1
-  )
+  return _c("footer", { staticClass: "footer" }, [
+    _c("p", [_c("copyright", [_vm._v("Youko Tanaka")])], 1)
+  ])
 }
 var staticRenderFns = []
 render._withStripped = true
