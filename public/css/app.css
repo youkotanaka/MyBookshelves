@@ -72,9 +72,7 @@ body {
   line-height: 1.6;
   color: #212529;
   text-align: left;
-  background-image: url(../image/Background.jpg);
-  background-color: rgba(248, 250, 252, 0.4);
-  background-blend-mode: lighten;
+  background-color: #f8fafc;
 }
 
 [tabindex="-1"]:focus:not(:focus-visible) {
@@ -10903,5 +10901,15 @@ a.text-dark:focus {
     color: inherit;
     border-color: #dee2e6;
   }
+}
+
+body {
+  background-image: url(/images/Background.jpg?782295e5971f6cb2dd5bfeaf1261da1e);
+  background-color: rgba(248, 250, 252, 0.4);
+  background-blend-mode: lighten;
+}
+
+.navbar {
+  padding: 1rem 1rem;
 }
 

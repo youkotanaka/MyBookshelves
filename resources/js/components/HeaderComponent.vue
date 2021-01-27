@@ -2,7 +2,7 @@
   <div class="container-fluid bg-dark mb-3">
     <div class="container">
       <nav class="navbar navbar-dark">
-        <RouterLink class="navbar__brand" to="/">
+        <RouterLink class="navbar__brand" to="/" id="title">
           MyBookshelves
         </RouterLink>
     <!-- <div class="navbar__menu">

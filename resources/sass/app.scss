@@ -1,8 +1,23 @@
 // Fonts
 @import url('https://fonts.googleapis.com/css?family=Nunito');
+// @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@700&display=swap');
 
 // Variables
 @import 'variables';
 
 // Bootstrap
 @import '~bootstrap/scss/bootstrap';
+
+body {
+    background-image: url(../../public/image/Background.jpg);
+    background-color: rgba(248, 250, 252, 0.4);
+    background-blend-mode: lighten;
+}
+
+.navbar {
+    padding: 1.0rem 1.0rem;
+}
+
+// .navbar #title {
+//     font-family: 'Caveat', cursive;
+// }

@@ -4694,7 +4694,7 @@ var render = function() {
         [
           _c(
             "RouterLink",
-            { staticClass: "navbar__brand", attrs: { to: "/" } },
+            { staticClass: "navbar__brand", attrs: { to: "/", id: "title" } },
             [_vm._v("\n        MyBookshelves\n      ")]
           ),
           _vm._v(" "),
