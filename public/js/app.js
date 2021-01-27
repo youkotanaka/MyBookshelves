@@ -4686,11 +4686,11 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", { staticClass: "container-fluid bg-dark mb-3" }, [
+  return _c("div", { staticClass: "container-fluid bg-color mb-3" }, [
     _c("div", { staticClass: "container" }, [
       _c(
         "nav",
-        { staticClass: "navbar navbar-dark" },
+        { staticClass: "navbar navbar-color" },
         [
           _c(
             "RouterLink",
@@ -4979,7 +4979,7 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("thead", { staticClass: "thead-light" }, [
+    return _c("thead", { staticClass: "thead-color" }, [
       _c("tr", [
         _c("th", { attrs: { scope: "col" } }, [_vm._v("#")]),
         _vm._v(" "),

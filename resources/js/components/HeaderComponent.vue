@@ -1,7 +1,7 @@
 <template>
-  <div class="container-fluid bg-dark mb-3">
+  <div class="container-fluid bg-color mb-3">
     <div class="container">
-      <nav class="navbar navbar-dark">
+      <nav class="navbar navbar-color">
         <RouterLink class="navbar__brand" to="/" id="title">
           MyBookshelves
         </RouterLink>

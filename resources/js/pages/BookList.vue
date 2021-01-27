@@ -13,7 +13,7 @@
         >
         </div>
     <table class="table table-hover">
-      <thead class="thead-light">
+      <thead class="thead-color">
         <tr>
           <th scope="col">#</th>
           <th scope="col">Title</th>
