@@ -1,13 +1,13 @@
 <template>
   <div class="container">
     <h1>Book List</h1>
-    <p>Search：
+    <label class="search-box">Search：
     <InputComponent
             v-bind:value = "searchText"
             v-on:input = "searchText = $event"
             v-on:compositionStart = "isComposing = true"
             v-on:compositionend = "isComposing = false" />
-    </p>
+    </label>
         <div
             v-for = "(book, index) in search_books"
             v-bind:key = "index"
@@ -40,7 +40,7 @@
             </RouterLink>
           </td>
           <td>
-            <ButtonComponent class= "btn btn-warning" btnName = "Delete" v-on:click="openModal"/>
+            <ButtonComponent class= "btn btn-menu2" btnName = "Delete" v-on:click="openModal"/>
             <ModalComponent v-on:close="closeModal" v-if="showContent">
               <p>本当に削除してよろしいですか？</p>
               <ButtonComponent class="btn btn-primary" v-on:click="closeModal" btnName="Cancel" />

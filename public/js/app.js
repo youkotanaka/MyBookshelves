@@ -4862,7 +4862,8 @@ var render = function() {
       _c("h1", [_vm._v("Book List")]),
       _vm._v(" "),
       _c(
-        "p",
+        "label",
+        { staticClass: "search-box" },
         [
           _vm._v("Search：\n  "),
           _c("InputComponent", {
@@ -4948,7 +4949,7 @@ var render = function() {
                 "td",
                 [
                   _c("ButtonComponent", {
-                    staticClass: "btn btn-warning",
+                    staticClass: "btn btn-menu2",
                     attrs: { btnName: "Delete" },
                     on: { click: _vm.openModal }
                   }),
