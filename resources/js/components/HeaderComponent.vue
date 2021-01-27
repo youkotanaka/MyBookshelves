@@ -5,7 +5,7 @@
         <RouterLink class="navbar__brand" to="/">
           MyBookshelves
         </RouterLink>
-    <div class="navbar__menu">
+    <!-- <div class="navbar__menu">
       <div v-if="isLogin" class="navbar__item">
         <button class="button">
           <i class="icon ion-md-add"></i>
@@ -20,7 +20,7 @@
           Login / Register
         </RouterLink>
       </div>
-    </div>
+    </div> -->
     <div>
       <RouterLink class="button button--link" to="/books">BookList</RouterLink>
       <RouterLink class="button button--link" to="/books/create">ADD</RouterLink>
