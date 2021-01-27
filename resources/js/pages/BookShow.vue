@@ -1,7 +1,7 @@
 <template>
     <div>
         <h1>Book Show</h1>
-        <div class="col-sm-6">
+        <div class="col-sm-6 bg-box">
             <form>
                 <div class="form-group row border-bottom">
                     <label for="id" class="col-sm-3 col-form-label">ID</label>

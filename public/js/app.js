@@ -2429,6 +2429,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _components_ButtonComponent_vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../components/ButtonComponent.vue */ "./resources/js/components/ButtonComponent.vue");
 //
 //
 //
@@ -2450,7 +2451,11 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+
 /* harmony default export */ __webpack_exports__["default"] = ({
+  components: {
+    ButtonComponent: _components_ButtonComponent_vue__WEBPACK_IMPORTED_MODULE_0__["default"]
+  },
   data: function data() {
     return {
       book: {}
@@ -2722,7 +2727,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "\n#overlay{\n  /* 要素を重ねたときの順番 */\n  z-index:1;\n\n  /* 画面全体を覆う設定 */\n  position: fixed;\n  top: 0;\n  left: 0;\n  width: 100%;\n  height: 100%;\n  background-color: rgba(0,0,0,0.1);\n\n  /* 画面中央に要素を表示させる設定 */\n  display: flex;\n  align-items: center;\n  justify-content: center;\n}\n#attention{\n  z-index: 2;\n  width: 50%;\n  padding: 1em;\n  background: #fff;\n}\n", ""]);
+exports.push([module.i, "\n#overlay{\n  /* 要素を重ねたときの順番 */\n  z-index:1;\n\n  /* 画面全体を覆う設定 */\n  position: fixed;\n  top: 0;\n  left: 0;\n  width: 100%;\n  height: 100%;\n  background-color: rgba(0,0,0,0.1);\n\n  /* 画面中央に要素を表示させる設定 */\n  display: flex;\n  align-items: center;  \n  justify-content: center;\n}\n#attention{\n  z-index: 2;\n  width: 50%;\n  padding: 1em;\n  background: #fff;\n}\n", ""]);
 
 // exports
 
@@ -4921,7 +4926,7 @@ var render = function() {
                     },
                     [
                       _c("ButtonComponent", {
-                        staticClass: "btn btn-primary",
+                        staticClass: "btn btn-normal",
                         attrs: { btnName: "Show" }
                       })
                     ],
@@ -4943,7 +4948,7 @@ var render = function() {
                     },
                     [
                       _c("ButtonComponent", {
-                        staticClass: "btn btn-success",
+                        staticClass: "btn btn-normal",
                         attrs: { btnName: "Edit" }
                       })
                     ],
@@ -4957,7 +4962,7 @@ var render = function() {
                 "td",
                 [
                   _c("ButtonComponent", {
-                    staticClass: "btn btn-danger",
+                    staticClass: "btn btn-warning",
                     attrs: { btnName: "Delete" },
                     on: { click: _vm.openModal }
                   }),
@@ -4970,6 +4975,12 @@ var render = function() {
                           _c("p", [_vm._v("本当に削除してよろしいですか？")]),
                           _vm._v(" "),
                           _c("ButtonComponent", {
+                            staticClass: "btn btn-primary",
+                            attrs: { btnName: "Cancel" },
+                            on: { click: _vm.closeModal }
+                          }),
+                          _vm._v(" "),
+                          _c("ButtonComponent", {
                             staticClass: "btn btn-danger",
                             attrs: { btnName: "OK" },
                             on: {
@@ -4977,12 +4988,6 @@ var render = function() {
                                 return _vm.deleteBook(book.id)
                               }
                             }
-                          }),
-                          _vm._v(" "),
-                          _c("ButtonComponent", {
-                            staticClass: "btn btn-primary",
-                            attrs: { btnName: "Cancel" },
-                            on: { click: _vm.closeModal }
                           })
                         ],
                         1
@@ -5046,7 +5051,7 @@ var render = function() {
   return _c("div", [
     _c("h1", [_vm._v("Book Show")]),
     _vm._v(" "),
-    _c("div", { staticClass: "col-sm-6" }, [
+    _c("div", { staticClass: "col-sm-6 bg-box" }, [
       _c("form", [
         _c("div", { staticClass: "form-group row border-bottom" }, [
           _c(
@@ -5191,7 +5196,7 @@ var render = function() {
     _c("h1", [_vm._v("List Create")]),
     _vm._v(" "),
     _c("div", { staticClass: "row justify-content-center" }, [
-      _c("div", { staticClass: "col-sm-6" }, [
+      _c("div", { staticClass: "col-sm-6 bg-box" }, [
         _c(
           "form",
           {
@@ -5269,12 +5274,12 @@ var render = function() {
               })
             ]),
             _vm._v(" "),
-            _c(
-              "button",
-              { staticClass: "btn btn-primary", attrs: { type: "submit" } },
-              [_vm._v("Submit")]
-            )
-          ]
+            _c("ButtonComponent", {
+              staticClass: "btn btn-normal",
+              attrs: { type: "submit", btnName: "Submit" }
+            })
+          ],
+          1
         )
       ])
     ])
@@ -5306,7 +5311,7 @@ var render = function() {
     _c("h1", [_vm._v("List Edit")]),
     _vm._v(" "),
     _c("div", { staticClass: "row justify-content-center" }, [
-      _c("div", { staticClass: "col-sm-6" }, [
+      _c("div", { staticClass: "col-sm-6 bg-box" }, [
         _c(
           "form",
           {
@@ -5419,7 +5424,7 @@ var render = function() {
             _vm._v(" "),
             _c(
               "button",
-              { staticClass: "btn btn-primary", attrs: { type: "submit" } },
+              { staticClass: "btn btn-normal", attrs: { type: "submit" } },
               [_vm._v("Submit")]
             )
           ]

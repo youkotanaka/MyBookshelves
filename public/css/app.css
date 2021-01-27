@@ -10918,25 +10918,43 @@ h1 {
   padding: 1rem 1rem;
 }
 
-.bg-color {
-  background-color: #9bc46c;
-}
-
-.navbar-color {
-  background-color: #9bc46c;
+.bg-color,
+.navbar-color,
+.thead-color {
+  background-color: #7a5b43;
 }
 
 .btn-menu {
   color: #fff;
-  background-color: #e7824b;
-  border-color: #e7824b;
+  background-color: #719e3e;
+  border-color: #bfdd9d;
+}
+
+.btn {
+  font-weight: bold;
+}
+
+.btn-normal {
+  color: #4b321e;
+  background-color: #B99B84;
+  border-color: #7a5b43;
 }
 
 .table {
-  background-color: rgba(215, 228, 200, 0.4);
+  background-color: rgba(241, 231, 224, 0.5);
 }
 
-.thead-color {
-  background-color: #9bc46c;
+thead {
+  color: #fff;
+}
+
+tbody td,
+div label {
+  font-weight: bold;
+}
+
+.bg-box {
+  background-color: rgba(241, 231, 224, 0.5);
+  padding: 40px 50px 50px 30px;
 }
 

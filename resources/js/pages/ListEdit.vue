@@ -2,7 +2,7 @@
     <div>
         <h1>List Edit</h1>
         <div class="row justify-content-center">
-            <div class="col-sm-6">
+            <div class="col-sm-6 bg-box">
                 <form v-on:submit.prevent="submit">
                     <div class="form-group row">
                         <label for="id" class="col-sm-3 col-form-label">ID</label>
@@ -16,7 +16,7 @@
                         <label for="vol" class="col-sm-3 col-form-label">Vol</label>
                         <input type="text" class="col-sm-9 form-controle" id="vol" v-model="book.vol">
                     </div>
-                    <button type="submit" class="btn btn-primary">Submit</button>
+                    <button type="submit" class="btn btn-normal">Submit</button>
                 </form>
             </div>
         </div>

@@ -23,27 +23,57 @@ h1 {
     padding: 1.0rem 1.0rem;
 }
 
-.bg-color {
-    background-color: #9bc46c;
+.bg-color,
+.navbar-color,
+.thead-color {
+    background-color: #7a5b43;
 }
 
-.navbar-color {
-    background-color: #9bc46c;
-}
+// .btn-menu {
+//     color: #fff;
+//     background-color: #e7824b;
+//     border-color: #f7b998;
+// }
 
 .btn-menu {
     color: #fff;
-    background-color: #e7824b;
-    border-color: #e7824b;
+    background-color:  #719e3e;
+    border-color: #bfdd9d;
 }
+
+.btn {
+    font-weight: bold;
+}
+
+.btn-normal {
+    color: #4b321e;
+    background-color: #B99B84;
+    border-color: #7a5b43;
+}
+
 
 .table {
-    background-color:rgba(#d7e4c8, 0.4);
+    background-color:rgba(#f1e7e0, 0.5);
 }
 
-.thead-color {
-    background-color: #9bc46c;
+thead {
+    color: #fff;
 }
+
+tbody td,
+div label {
+    font-weight: bold;
+}
+
+.bg-box {
+    background-color: rgba(#f1e7e0, 0.5);
+    padding: 40px 50px 50px 30px;
+}
+
+//  {
+//     background-color: ;rgba(#f0f0d4, 0.5);
+// }
+
 // .navbar #title {
 //     font-family: 'Caveat', cursive;
 // }

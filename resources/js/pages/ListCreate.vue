@@ -2,7 +2,7 @@
     <div>
         <h1>List Create</h1>
         <div class="row justify-content-center">
-            <div class="col-sm-6">
+            <div class="col-sm-6 bg-box">
                 <form v-on:submit.prevent="submit">
                     <div class="form-group row">
                         <label for="title" class="col-sm-3 col-form-label">Title</label>
@@ -12,7 +12,7 @@
                         <label for="vol" class="col-sm-3 col-form-label">Vol</label>
                         <input type="text" class="col-sm-9 form-control" id="vol" v-model="book.vol">
                     </div>
-                    <button type="submit" class="btn btn-primary">Submit</button>
+                    <ButtonComponent type="submit" class="btn btn-normal" btnName="Submit" />
                 </form>
             </div>
         </div>
@@ -20,7 +20,11 @@
 </template>
 
 <script>
+import ButtonComponent from '../components/ButtonComponent.vue';
 export default {
+    components: {
+        ButtonComponent
+    },
     data: function() {
         return {
             book: {}

@@ -33,7 +33,7 @@ export default {
 
     /* 画面中央に要素を表示させる設定 */
     display: flex;
-    align-items: center;
+    align-items: center;  
     justify-content: center;
   }
   #attention{
