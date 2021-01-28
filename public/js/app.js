@@ -4696,7 +4696,15 @@ var render = function() {
           _c(
             "RouterLink",
             { staticClass: "navbar__brand", attrs: { to: "/", id: "title" } },
-            [_vm._v("\n        MyBookshelves\n      ")]
+            [
+              _c("img", {
+                attrs: {
+                  src: __webpack_require__(/*! ../../../public/image/Logo-DancingScript.gif */ "./public/image/Logo-DancingScript.gif"),
+                  alt: "MyBookshelves",
+                  id: "logo"
+                }
+              })
+            ]
           ),
           _vm._v(" "),
           _c(
@@ -22274,6 +22282,17 @@ try {
 
 module.exports = g;
 
+
+/***/ }),
+
+/***/ "./public/image/Logo-DancingScript.gif":
+/*!*********************************************!*\
+  !*** ./public/image/Logo-DancingScript.gif ***!
+  \*********************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "/images/Logo-DancingScript.gif?8449393c4d337c47678c6a5ac2db94ed";
 
 /***/ }),
 

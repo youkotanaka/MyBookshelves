@@ -1,6 +1,4 @@
-@import url(https://fonts.googleapis.com/css?family=Nunito);
-@import url(https://fonts.googleapis.com/css2?family=Caveat:wght@700&display=swap);
-@import url(https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Fredoka+One&display=swap);@charset "UTF-8";
+@import url(https://fonts.googleapis.com/css?family=Nunito);@import url(https://fonts.googleapis.com/css2?family=Caveat:wght@700&display=swap);@import url(https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Fredoka+One&display=swap);@charset "UTF-8";
 
 /*!
  * Bootstrap v4.5.3 (https://getbootstrap.com/)
@@ -10990,5 +10988,10 @@ div input {
   padding: 0.5rem 1rem;
   text-align: center;
   margin-top: auto;
+}
+
+#logo {
+  height: 30%;
+  width: 30%;
 }
 
