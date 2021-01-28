@@ -3,7 +3,7 @@
     <div class="container">
       <nav class="navbar navbar-color">
         <RouterLink class="navbar__brand" to="/" id="title">
-          <img src="../../../public/image/Logo-DancingScript.gif" alt="MyBookshelves" id="logo">
+          <img src="../../../public/images/Logo-DancingScript50off.gif" alt="MyBookshelves" id="logo">
         </RouterLink>
     <!-- <div class="navbar__menu">
       <div v-if="isLogin" class="navbar__item">

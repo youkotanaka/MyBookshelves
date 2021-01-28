@@ -10,7 +10,7 @@
 @import '~bootstrap/scss/bootstrap';
 
 body {
-    background-image: url(../../public/image/Background.jpg);
+    background-image: url(../../public/images/Background.jpg);
     background-color: rgba(#f8fafc, 0.4);
     background-blend-mode: lighten;
 }
@@ -37,11 +37,7 @@ h1 {
     background-color: #7a5b43;
 }
 
-.btn-menu2 {
-    color: #fff;
-    background-color: #e7824b;
-    border-color: #f7b998;
-}
+
 
 .btn-menu {
     color: #fff;
@@ -54,9 +50,15 @@ h1 {
 }
 
 .btn-normal {
-    color: #4b321e;
-    background-color: #B99B84;
-    border-color: #7a5b43;
+    color: #fff;
+    background-color: #7a5b43;
+    border-color: #B99B84;
+}
+
+.btn-attention {
+    color: #fff;
+    background-color: #fcb724;
+    border-color: #ffe09c;
 }
 
 .search-box {
@@ -97,6 +99,6 @@ div input {
 }
 
 #logo {
-    height: 30%;
-    width: 30%;
+    height: 60%;
+    width: 60%;
 }

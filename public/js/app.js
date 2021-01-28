@@ -4699,7 +4699,7 @@ var render = function() {
             [
               _c("img", {
                 attrs: {
-                  src: __webpack_require__(/*! ../../../public/image/Logo-DancingScript.gif */ "./public/image/Logo-DancingScript.gif"),
+                  src: __webpack_require__(/*! ../../../public/images/Logo-DancingScript50off.gif */ "./public/images/Logo-DancingScript50off.gif"),
                   alt: "MyBookshelves",
                   id: "logo"
                 }
@@ -4957,7 +4957,7 @@ var render = function() {
                 "td",
                 [
                   _c("ButtonComponent", {
-                    staticClass: "btn btn-menu2",
+                    staticClass: "btn btn-attention",
                     attrs: { btnName: "Delete" },
                     on: { click: _vm.openModal }
                   }),
@@ -22285,14 +22285,14 @@ module.exports = g;
 
 /***/ }),
 
-/***/ "./public/image/Logo-DancingScript.gif":
-/*!*********************************************!*\
-  !*** ./public/image/Logo-DancingScript.gif ***!
-  \*********************************************/
+/***/ "./public/images/Logo-DancingScript50off.gif":
+/*!***************************************************!*\
+  !*** ./public/images/Logo-DancingScript50off.gif ***!
+  \***************************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "/images/Logo-DancingScript.gif?8449393c4d337c47678c6a5ac2db94ed";
+module.exports = "/images/Logo-DancingScript50off.gif?0dfbca61e502cc6a8ef902dd28c1e205";
 
 /***/ }),
 

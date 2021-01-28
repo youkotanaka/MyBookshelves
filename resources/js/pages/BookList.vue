@@ -40,7 +40,7 @@
             </RouterLink>
           </td>
           <td>
-            <ButtonComponent class= "btn btn-menu2" btnName = "Delete" v-on:click="openModal"/>
+            <ButtonComponent class= "btn btn-attention" btnName = "Delete" v-on:click="openModal"/>
             <ModalComponent v-on:close="closeModal" v-if="showContent">
               <p>本当に削除してよろしいですか？</p>
               <ButtonComponent class="btn btn-primary" v-on:click="closeModal" btnName="Cancel" />
