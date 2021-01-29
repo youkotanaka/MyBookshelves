@@ -18,9 +18,6 @@ class CreateBooksTable extends Migration
             $table->string('title', 100);
             $table->string('vol', 50)->nullable();
             $table->timestamps();
-
-            //Primary Key設定
-            $table->primary(['id']);
         });
     }
 
