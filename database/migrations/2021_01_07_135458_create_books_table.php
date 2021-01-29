@@ -16,8 +16,11 @@ class CreateBooksTable extends Migration
         Schema::create('books', function (Blueprint $table) {
             $table->increments('id');
             $table->string('title', 100);
-            $table->string('vol', 50);
+            $table->string('vol', 50)->nullable();
             $table->timestamps();
+
+            //Primary Key設定
+            $table->primary(['id']);
         });
     }
 
