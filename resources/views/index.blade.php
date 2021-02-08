@@ -7,7 +7,7 @@
   <!-- CSRF Token -->
   <meta name="csrf-token" content="{{ csrf_token() }}">
   
-  <title>{{ config('app.name', 'Vue Larave SPA') }}</title>
+  <title>{{ config('app.name', 'MyBookshelves') }}</title>
 
   <!-- Fonts -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Merriweather|Roboto:400">
