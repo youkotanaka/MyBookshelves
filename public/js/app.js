@@ -2446,6 +2446,23 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   components: {
@@ -5197,17 +5214,73 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _vm._m(0)
+  return _c("div", [
+    _c("h1", [_vm._v("Index")]),
+    _vm._v(" "),
+    _c("div", { staticClass: "row justify-content-center" }, [
+      _c("div", { staticClass: "col-sm-6 bg-box" }, [
+        _vm._m(0),
+        _vm._v(" "),
+        _c("table", { staticClass: "not_table" }, [
+          _c("tr", [
+            _c(
+              "th",
+              [
+                _c(
+                  "RouterLink",
+                  { attrs: { to: "/books" } },
+                  [
+                    _c("ButtonComponent", {
+                      staticClass: "btn btn-menu",
+                      attrs: { btnName: "BookList" }
+                    })
+                  ],
+                  1
+                )
+              ],
+              1
+            ),
+            _vm._v(" "),
+            _c("td", [_vm._v("書籍の一覧ページへ移動します")])
+          ]),
+          _vm._v(" "),
+          _c("tr", [
+            _c(
+              "th",
+              [
+                _c(
+                  "RouterLink",
+                  { attrs: { to: "/books/create" } },
+                  [
+                    _c("ButtonComponent", {
+                      staticClass: "btn btn-menu",
+                      attrs: { btnName: "ADD" }
+                    })
+                  ],
+                  1
+                )
+              ],
+              1
+            ),
+            _vm._v(" "),
+            _c("td", [_vm._v("書籍を新たに登録します")])
+          ])
+        ])
+      ])
+    ])
+  ])
 }
 var staticRenderFns = [
   function() {
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", [
-      _c("h1", [_vm._v("Index")]),
-      _vm._v(" "),
-      _c("div", [_vm._v("\n        test\n        ")])
+    return _c("p", [
+      _vm._v("\n            「MyBookshelves」は、書籍管理アプリです。"),
+      _c("br"),
+      _vm._v(
+        "\n            所有している書籍を登録することができます。\n            "
+      )
     ])
   }
 ]
