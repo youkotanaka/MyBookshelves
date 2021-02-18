@@ -41,13 +41,13 @@ export default {
   components: {
     ButtonComponent
   },
-  computed: {
-    isLogin () {
-      return this.$store.getters['auth/check']
-    },
-    username () {
-      return this.$store.getters['auth/username']
-    }
-  }
+  // computed: {
+  //   isLogin () {
+  //     return this.$store.getters['auth/check']
+  //   },
+  //   username () {
+  //     return this.$store.getters['auth/username']
+  //   }
+  // }
 }
 </script>
