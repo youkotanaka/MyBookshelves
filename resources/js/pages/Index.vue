@@ -1,15 +1,13 @@
 <template>
     <div>
         <h1>Index</h1>
-        <div class="row justify-content-center">
-
-                <RouterLink to="/books">
-                    <ButtonComponent class="btn btn-menu" btnName="BookList" />
-                </RouterLink>
-                <RouterLink to="/books/create">
-                    <ButtonComponent class="btn btn-menu" btnName="ADD" />
-                </RouterLink>
-
+        <div>
+            <RouterLink to="/books">
+                <ButtonComponent class="btn btn-menu" btnName="BookList" />
+            </RouterLink>
+            <RouterLink to="/books/create">
+                <ButtonComponent class="btn btn-menu" btnName="ADD" />
+            </RouterLink>
         </div>
     </div>
 </template>
